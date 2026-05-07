@@ -126,12 +126,58 @@ body::before{
 }
 
  
-/* ⭐ Search */
 .search-box{
   position:fixed;
-  top:120px;        /* notice এর নিচে রাখার জন্য (adjust করতে পারো) */
+  top:120px;
   left:50%;
   transform:translateX(-50%);
+
+  z-index:3000;
+
+  width:90%;
+  max-width:520px;
+
+  padding:14px 20px;
+
+  border-radius:18px;
+
+  border:1px solid rgba(255,215,120,0.35);
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(15,25,45,0.88),
+    rgba(8,18,35,0.75)
+  );
+
+  backdrop-filter:blur(14px);
+
+  color:white;
+  font-size:17px;
+  letter-spacing:0.5px;
+
+  outline:none;
+
+  box-shadow:
+  0 0 20px rgba(255,215,120,0.12),
+  inset 0 0 10px rgba(255,255,255,0.03);
+
+  transition:0.3s;
+}
+
+/* Placeholder */
+.search-box::placeholder{
+  color:rgba(255,255,255,0.6);
+}
+
+/* Focus Effect */
+.search-box:focus{
+  border:1px solid rgba(255,215,120,0.7);
+
+  box-shadow:
+  0 0 25px rgba(255,215,120,0.25),
+  0 0 50px rgba(255,180,50,0.08);
+}
 
   z-index:3000;
 
@@ -191,7 +237,7 @@ body, html{
     <img src="overlay.png" alt="Notice">
   </div>
 
-  <input type="text" class="search-box" placeholder="Search country...">
+  <input type="text" class="search-box" placeholder="🕌 Search country...">
 
 </div>
 
