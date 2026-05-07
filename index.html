@@ -68,10 +68,7 @@ body::before{
 
 
 
-.notice img{
-  width:100%;
-  border-radius:10px;
-}
+
 
 
 
@@ -184,20 +181,30 @@ body::before{
   width:90%;
   max-width:5000px;
 }
+
 .notice{
   position:fixed;
-  top:0px;
+  top:0;
   left:50%;
   transform:translateX(-50%);
 
-  width:110%;        /* 🔥 zoom effect */
-  max-width:700px;   /* desktop limit */
+  width:110%;
+  max-width:700px;
 
   z-index:100;
+
+  pointer-events:none;
 }
 
+.notice img{
+  width:100%;
+  display:block;
+  border-radius:10px;
 
-
+  -webkit-tap-highlight-color: transparent;
+  user-select:none;
+  -webkit-user-drag:none;
+}
 
 
 
