@@ -308,6 +308,17 @@ body.loading .top-section,
 body.loading .list{
   opacity:0;
 }
+
+/* Disable scroll while loading */
+body.loading{
+  overflow:hidden;
+}
+
+/* Smooth fade animation */
+.top-section,
+.list{
+  transition:1s ease;
+}
 </style>
 </head>
 
