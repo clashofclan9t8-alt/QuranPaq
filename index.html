@@ -210,7 +210,7 @@ body::before{
   pointer-events:none;
 }
 
-   
+
 
   @media(max-width:768px){
 
@@ -318,36 +318,6 @@ body.loading{
 .top-section,
 .list{
   transition:1s ease;
-}
-
-
-  /* 🔥 FIX BLINK / TAP FLASH */
-*{
-  -webkit-tap-highlight-color: transparent;
-}
-
-img,
-div,
-input,
-button,
-a{
-  -webkit-tap-highlight-color: transparent;
-  tap-highlight-color: transparent;
-  outline:none;
-}
-
-/* iPhone smooth touch */
-body{
-  -webkit-touch-callout:none;
-}
-
-/* Banner image fix */
-.notice,
-.notice img{
-  transform:translateZ(0);
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
-  will-change:transform;
 }
 </style>
 </head>
