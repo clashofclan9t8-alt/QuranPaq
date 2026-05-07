@@ -609,22 +609,7 @@ searchBox.addEventListener("keyup", function () {
 });
 
 </script>
-<script>
-const searchBox = document.querySelector(".search-box");
-const countries = document.querySelectorAll(".country-card");
-const list = document.querySelector(".list");
 
-/* 🔍 SEARCH */
-searchBox.addEventListener("keyup", function () {
-  const value = searchBox.value.toLowerCase();
-
-  countries.forEach(card => {
-    const name = card.innerText.toLowerCase();
-    card.style.display = name.includes(value) ? "flex" : "none";
-  });
-});
-
-</script>
 
 </body>
 </html>
