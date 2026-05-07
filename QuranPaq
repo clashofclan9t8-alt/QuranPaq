@@ -162,11 +162,13 @@ body::before{
 }
 
 .notice img:hover{
-  transform:scale(0);
+  transform:none;
 }
 
 
 
+
+  
   .country-card{
     padding:10px;
   }
