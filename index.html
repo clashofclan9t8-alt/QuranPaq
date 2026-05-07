@@ -242,12 +242,84 @@ body, html{
     padding-top:250px;
   }
 }
+/* 🌙 LOADER */
+#loader{
+  position:fixed;
+  inset:0;
 
+  background:
+  linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
+  url("background.png");
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:99999;
+
+  transition:1s ease;
+}
+
+/* Arabic Text */
+.dua-text{
+  color:white;
+
+  font-size:42px;
+  font-weight:bold;
+
+  text-align:center;
+
+  text-shadow:
+  0 0 15px rgba(255,255,255,0.4),
+  0 0 35px rgba(255,215,120,0.25);
+
+  animation:
+  fadeText 2s infinite alternate,
+  zoomText 4s infinite;
+}
+
+/* Text Glow */
+@keyframes fadeText{
+  from{
+    opacity:0.5;
+  }
+
+  to{
+    opacity:1;
+  }
+}
+
+/* Slow Zoom */
+@keyframes zoomText{
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.08);
+  }
+}
+
+/* Hide Main Page First */
+body.loading .top-section,
+body.loading .list{
+  opacity:0;
+}
 </style>
 </head>
 
 <body>
+<!-- LOADER -->
+<div id="loader">
 
+  <div class="dua-text">
+    يَا ٱللَّٰهُ
+  </div>
+
+</div>
 <!-- HEADER -->
 <div class="top-section">
 
@@ -465,7 +537,78 @@ body, html{
   <!-- 👉 তুমি এখানে তোমার full list paste করবে -->
 
 </div>
+<script>
 
+const duas = [
+  "يَا ٱللَّٰهُ",
+  "يَا رَحْمَٰنُ",
+  "يَا رَحِيمُ",
+  "يَا مَلِكُ",
+  "يَا قُدُّوسُ",
+  "يَا سَلَامُ",
+  "يَا مُؤْمِنُ"
+];
+
+const duaText = document.querySelector(".dua-text");
+
+let index = 0;
+
+setInterval(() => {
+  index++;
+
+  if(index >= duas.length){
+    index = 0;
+  }
+
+  duaText.innerHTML = duas[index];
+
+}, 1800);
+
+
+/* PAGE LOADING */
+document.body.classList.add("loading");
+
+window.addEventListener("load", () => {
+
+  const loader = document.getElementById("loader");
+
+  setTimeout(() => {
+
+    loader.style.opacity = "0";
+
+    document.body.classList.remove("loading");
+
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 1000);
+
+  }, 1200);
+
+});
+
+
+/* SEARCH */
+const searchBox = document.querySelector(".search-box");
+const countries = document.querySelectorAll(".country-card");
+
+searchBox.addEventListener("keyup", function () {
+
+  const value = searchBox.value.toLowerCase();
+
+  countries.forEach(card => {
+
+    const name = card.innerText.toLowerCase();
+
+    card.style.display =
+      name.includes(value)
+      ? "flex"
+      : "none";
+
+  });
+
+});
+
+</script>
 <script>
 const searchBox = document.querySelector(".search-box");
 const countries = document.querySelectorAll(".country-card");
