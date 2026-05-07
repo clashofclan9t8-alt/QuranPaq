@@ -77,26 +77,20 @@ body::before{
   margin-bottom:20px;
 }
 
-.notice img{
-  width:100%;
-  display:block;
-}
+
 
 .notice img{
   width:100%;
   border-radius:10px;
 }
 
-/* ⭐ Search */
-.search-box{
-  margin-top:10px;
-  margin-bottom:10px;
-}
+
 
 /* ⭐ LIST */
 .list{
   position:relative;
   z-index:2;
+  margin-top:180px
 }
 
 .list.hide{
@@ -142,15 +136,36 @@ body::before{
   }
 }
 
-  .notice{
-    top:10px;
-    max-width:90%;
-  }
+ 
+/* ⭐ Search */
+.search-box{
+  position:fixed;
+  top:120px;        /* notice এর নিচে রাখার জন্য (adjust করতে পারো) */
+  left:50%;
+  transform:translateX(-50%);
 
-  .search-box{
-    font-size:16px;
-    padding:10px;
-  }
+  z-index:3000;
+
+  width:90%;
+  max-width:5000px;
+}
+.notice{
+  position:fixed;
+  top:0px;
+  left:50%;
+  transform:translateX(-50%);
+
+  width:110%;        /* 🔥 zoom effect */
+  max-width:700px;   /* desktop limit */
+
+  z-index:100;
+}
+
+.notice img:hover{
+  transform:scale(5);
+}
+
+
 
   .country-card{
     padding:10px;
@@ -413,17 +428,6 @@ searchBox.addEventListener("keyup", function () {
   });
 });
 
-/* 🎯 SCROLL EFFECT */
-window.addEventListener("scroll", function(){
-  const listTop = list.getBoundingClientRect().top;
-  const searchBottom = searchBox.getBoundingClientRect().bottom;
-
-  if(listTop < searchBottom){
-    list.classList.add("hide");
-  } else {
-    list.classList.remove("hide");
-  }
-});
 </script>
 
 </body>
