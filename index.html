@@ -176,11 +176,7 @@ body::before{
   0 0 50px rgba(255,180,50,0.08);
 }
 
-  z-index:3000;
 
-  width:90%;
-  max-width:5000px;
-}
 
 .notice{
   position:fixed;
@@ -208,7 +204,12 @@ body::before{
 
 
 
-  
+  @media(max-width:768px){
+
+  body{
+    background-attachment:scroll;
+  }
+
   .country-card{
     padding:10px;
   }
@@ -221,6 +222,8 @@ body::before{
     width:40px;
     height:28px;
   }
+
+}
 }
 body, html{
   overflow-x:hidden;
