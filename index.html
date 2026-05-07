@@ -11,7 +11,9 @@
   padding:0;
   box-sizing:border-box;
 }
-
+html{
+  scroll-behavior:smooth;
+}
 body{
   font-family:sans-serif;
 
@@ -198,8 +200,14 @@ body::before{
   border-radius:10px;
 
   -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+
   user-select:none;
+  -webkit-user-select:none;
+
   -webkit-user-drag:none;
+
+  pointer-events:none;
 }
 
 
@@ -223,7 +231,7 @@ body::before{
     height:28px;
   }
 
-}
+
 }
 body, html{
   overflow-x:hidden;
