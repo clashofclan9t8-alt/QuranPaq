@@ -1,152 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Islamic Mission Alert</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quran Surah List</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0; 
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:
-    radial-gradient(circle at top,#123524 0%,#08140f 70%);
-    font-family:'Segoe UI',sans-serif;
-    overflow:hidden;
+  font-family:'Poppins',sans-serif;
+  background:
+  linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.88)),
+  url('pakistan.png');
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  color:#fff;
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
-.alert-box{
-    width:92%;
-    max-width:430px;
-    background:rgba(12,28,20,0.95);
-    border:1px solid rgba(255,215,120,.25);
-    border-radius:28px;
-    padding:32px 26px;
-    text-align:center;
-    color:#f5f0df;
-    backdrop-filter:blur(10px);
+/* overlay stars */
 
-    box-shadow:
-    0 0 30px rgba(0,0,0,.55),
-    0 0 20px rgba(255,215,120,.08);
-
-    animation:popup .6s ease;
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:
+  radial-gradient(rgba(255,255,255,.18) 1px, transparent 1px);
+  background-size:4px 4px;
+  opacity:.25;
+  pointer-events:none;
 }
 
-.icon{
-    font-size:56px;
-    margin-bottom:18px;
+/* top section */
+
+.hero{
+  width:100%;
+  padding:22px 16px 10px;
+  position:sticky;
+  top:0;
+  z-index:999;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,.45);
 }
 
-.title{
-    font-size:28px;
-    font-weight:700;
-    color:#ffd978;
-    margin-bottom:18px;
+.banner{
+  width:100%;
+  max-width:450px;
+  margin:auto;
+  border-radius:100px;
+  overflow:hidden;
+  border:1px solid rgba(255,215,120,.35);
+  box-shadow:
+  0 0 25px rgba(0,0,0,.55),
+  0 0 20px rgba(255,196,0,.10);
+  position:relative;
 }
 
-.message{
+.banner img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  display:block;
+  filter:brightness(1);
+   transform:scale(1.1);
+}
+
+.banner-content{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(255, 0, 0, 0));
+}
+
+.banner-content h1{
+  font-size:38px;
+  margin-bottom:5px;
+  color:#fff;
+  text-shadow:0 0 15px rgba(255,215,0,.45);
+}
+
+.banner-content p{
+  color:#9cff9c;
+  font-size:15px;
+}
+
+/* search */
+
+.search-box{
+  margin:18px auto 0;
+  width:100%;
+  max-width:450px;
+  position:relative;
+}
+
+.search-box input{
+  width:100%;
+  height:58px;
+  border:none;
+  outline:none;
+  border-radius:18px;
+  background:rgba(0,10,35,.85);
+  border:1px solid rgba(255,215,100,.28);
+  color:#fff;
+  font-size:17px;
+  padding:0 18px 0 55px;
+  box-shadow:
+  inset 0 0 10px rgba(255,215,100,.12),
+  0 0 15px rgba(0,0,0,.35);
+}
+
+.search-box input::placeholder{
+  color:#bdbdbd;
+}
+
+.search-icon{
+  position:absolute;
+  left:18px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:20px;
+  opacity:.8;
+}
+
+/* list */
+
+.container{
+  padding:18px 14px 40px;
+  max-width:500px;
+  margin:auto;
+}
+
+.surah-card{
+  width:100%;
+  background:
+  linear-gradient(90deg,
+  rgba(0,20,60,.96),
+  rgba(0,35,90,.92));
+  border-radius:22px;
+  margin-bottom:15px;
+  padding:16px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  gap:14px;
+  border:1px solid rgba(255,255,255,.05);
+  box-shadow:
+  0 8px 25px rgba(0,0,0,.25),
+  inset 0 0 10px rgba(255,215,0,.03);
+  transition:.25s;
+}
+
+.surah-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(255,215,0,.22);
+}
+
+.number{
+  min-width:52px;
+  height:52px;
+  border-radius:15px;
+  background:
+  linear-gradient(135deg,#ffd700,#ffb100);
+  color:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:17px;
+  box-shadow:0 0 15px rgba(255,196,0,.35);
+}
+
+.info{
+  flex:1;
+}
+
+.arabic{
+  font-family:'Noto Naskh Arabic',serif;
+  font-size:28px;
+  color:#fff;
+  margin-bottom:2px;
+  direction:rtl;
+}
+
+.bangla{
+  font-size:15px;
+  color:#d5d5d5;
+}
+
+.footer{
+  text-align:center;
+  color:#aaa;
+  padding:20px 10px 40px;
+  font-size:13px;
+}
+
+@media(max-width:480px){
+
+  .banner img{
+    height:150px;
+  }
+
+  .banner-content h1{
+    font-size:31px;
+  }
+
+  .search-box input{
+    height:55px;
     font-size:16px;
-    line-height:1.9;
-    color:#e8dcc0;
+  }
+
+  .arabic{
+    font-size:25px;
+  }
+
 }
 
-.name{
-    color:#fff2b3;
-    font-weight:700;
-}
-
-.highlight{
-    color:#ffd978;
-    font-weight:600;
-}
-
-.dua-box{
-    margin-top:24px;
-    padding:16px;
-    border-radius:18px;
-    background:rgba(255,255,255,.04);
-    border:1px solid rgba(255,215,120,.12);
-    font-size:15px;
-    line-height:1.8;
-    color:#f3e7c5;
-}
-
-button{
-    margin-top:28px;
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:16px;
-    background:linear-gradient(145deg,#ffd978,#d6a93d);
-    color:#102116;
-    font-size:17px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.3s;
-}
-
-button:hover{
-    transform:scale(1.03);
-}
-
-@keyframes popup{
-    from{
-        opacity:0;
-        transform:translateY(25px) scale(.95);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
 </style>
 </head>
-
 <body>
 
-<div class="alert-box">
+<!-- TOP -->
 
-    <div class="icon">🤲🕌</div>
+<div class="hero">
 
-    <div class="title">
-        Assalamu Alaikum
+  <div class="banner">
+
+    <img src="pakistan.png">
+
+    <div class="banner-content">
+      
     </div>
 
-    <div class="message">
-        I am <span class="name">Kamrul Islam Forhad</span>,  
-        and I am still working on this page.  
-        This project is currently <span class="highlight">under development</span>.
-        <br><br>
-        Please make dua for me so that I can complete this mission very soon.
-        May Allah ﷻ accept my efforts, place barakah in this work,
-        and allow this project to become something beneficial for people.
-    </div>
+  </div>
 
-    <div class="dua-box">
-        “May Allah ﷻ make this mission easy, successful,
-        and a source of الخير, peace, and sadaqah jariyah.”
-    </div>
-
-    <button onclick="goBack()">
-        Ameen 🤍
-    </button>
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+   <input type="text" id="searchInput" placeholder="سورہ کا نام لکھیں..." />
+  </div>
 
 </div>
 
+
+<!-- LIST -->
+
+<div class="container" id="surahList">
+
+<!-- SURAH ITEMS -->
+
 <script>
-function goBack(){
-    history.back();
+
+
+const surahs = [
+
+["الفاتحة","الفاتحہ","Alfatiha_pk.html"],
+["البقرة","البقرہ","Albaqara_pk.html"],
+["آل عمران","آل عمران","Alimran_pk.html"],
+["النساء","النساء","Annisa_pk.html"],
+["المائدة","المائدہ","Almaidah_pk.html"],
+["الأنعام","الأنعام","Alanam_pk.html"],
+["الأعراف","الاعراف","Alaraf_pk.html"],
+["الأنفال","الانفال","Alanfal_pk.html"],
+["التوبة","التوبہ","Attawbah_pk.html"],
+["يونس","یونس","Yunus_pk.html"],
+["هود","ہود","Hud_pk.html"],
+["يوسف","یوسف","Yusuf_pk.html"],
+["الرعد","الرعد","Arraad_pk.html"],
+["إبراهيم","ابراہیم","Ibrahim_pk.html"],
+["الحجر","الحجر","Alhijr_pk.html"],
+["النحل","النحل","Annahal_pk.html"],
+["الإسراء","الاسراء","Alisra_pk.html"],
+["الكهف","الکہف","Alkahf_pk.html"],
+["مريم","مریم","Maryam_pk.html"],
+["طه","طٰہٰ","Taha_pk.html"],
+["الأنبياء","الانبیاء","Alanbiya_pk.html"],
+["الحج","الحج","Alhajj_pk.html"],
+["المؤمنون","المؤمنون","Almuminun_pk.html"],
+["النور","النور","Annur_pk.html"],
+["الفرقان","الفرقان","Alfurqan_pk.html"],
+["الشعراء","الشعراء","Ashshuara_pk.html"],
+["النمل","النمل","Annaml_pk.html"],
+["القصص","القصص","Alqasas_pk.html"],
+["العنكبوت","العنکبوت","Alankabut_pk.html"],
+["الروم","الروم","Arrum_pk.html"],
+["لقمان","لقمان","Luqman_pk.html"],
+["السجدة","السجدہ","Assajdah_pk.html"],
+["الأحزاب","الاحزاب","Alahzab_pk.html"],
+["سبإ","سبا","Saba_pk.html"],
+["فاطر","فاطر","Fatir_pk.html"],
+["يس","یٰس","Yasin_pk.html"],
+["الصافات","الصافات","Assaffat_pk.html"],
+["ص","ص","Sad_pk.html"],
+["الزمر","الزمر","Azzumar_pk.html"],
+["غافر","غافر","Ghafir_pk.html"],
+["فصلت","فصلت","Fussilat_pk.html"],
+["الشورى","الشوریٰ","Ashshura_pk.html"],
+["الزخرف","الزخرف","Azzukhruf_pk.html"],
+["الدخان","الدخان","Addukhan_pk.html"],
+["الجاثية","الجاثیہ","Aljathiyah_pk.html"],
+["الأحقاف","الاحقاف","Alahqaf_pk.html"],
+["محمد","محمد","Muhammad_pk.html"],
+["الفتح","الفتح","Alfath_pk.html"],
+["الحجرات","الحجرات","Alhujurat_pk.html"],
+["ق","ق","Qaf_pk.html"],
+["الذاريات","الذاریات","Adhdhariyat_pk.html"],
+["الطور","الطور","Attur_pk.html"],
+["النجم","النجم","Annajm_pk.html"],
+["القمر","القمر","Alqamar_pk.html"],
+["الرحمن","الرحمٰن","Arrahman_pk.html"],
+["الواقعة","الواقعہ","Alwaqiah_pk.html"],
+["الحديد","الحدید","Alhadid_pk.html"],
+["المجادلة","المجادلہ","Almujadilah_pk.html"],
+["الحشر","الحشر","Alhashr_pk.html"],
+["الممتحنة","الممتحنہ","Almumtahanah_pk.html"],
+["الصف","الصف","Assaff_pk.html"],
+["الجمعة","الجمعہ","Aljumuah_pk.html"],
+["المنافقون","المنافقون","Almunafiqun_pk.html"],
+["التغابن","التغابن","Attaghabun_pk.html"],
+["الطلاق","الطلاق","Attalaq_pk.html"],
+["التحريم","التحریم","Attahrim_pk.html"],
+["الملك","الملک","Almulk_pk.html"],
+["القلم","القلم","Alqalam_pk.html"],
+["الحاقة","الحاقہ","Alhaqqah_pk.html"],
+["المعارج","المعارج","Almaarij_pk.html"],
+["نوح","نوح","Nuh_pk.html"],
+["الجن","الجن","Aljinn_pk.html"],
+["المزمل","المزمل","Almuzzammil_pk.html"],
+["المدثر","المدثر","Almuddaththir_pk.html"],
+["القيامة","القیامہ","Alqiyamah_pk.html"],
+["الإنسان","الانسان","Alinsan_pk.html"],
+["المرسلات","المرسلات","Almursalat_pk.html"],
+["النبأ","النبأ","Annaba_pk.html"],
+["النازعات","النازعات","Annaziat_pk.html"],
+["عبس","عبس","Abasa_pk.html"],
+["التكوير","التکویر","Attakwir_pk.html"],
+["الإنفطار","الانفطار","Alinfitar_pk.html"],
+["المطففين","المطففین","Almutaffifin_pk.html"],
+["الإنشقاق","الانشقاق","Alinshiqaq_pk.html"],
+["البروج","البروج","Alburuj_pk.html"],
+["الطارق","الطارق","Attariq_pk.html"],
+["الأعلى","الاعلیٰ","Alala_pk.html"],
+["الغاشية","الغاشیہ","Alghashiyah_pk.html"],
+["الفجر","الفجر","Alfajr_pk.html"],
+["البلد","البلد","Albalad_pk.html"],
+["الشمس","الشمس","Ashshams_pk.html"],
+["الليل","اللیل","Allayl_pk.html"],
+["الضحى","الضحیٰ","Adduha_pk.html"],
+["الشرح","الشرح","Ashsharh_pk.html"],
+["التين","التین","Attin_pk.html"],
+["العلق","العلق","Alalaq_pk.html"],
+["القدر","القدر","Alqadr_pk.html"],
+["البينة","البینۃ","Albayyinah_pk.html"],
+["الزلزلة","الزلزلہ","Alzalzalah_pk.html"],
+["العاديات","العادیات","Aladiyat_pk.html"],
+["القارعة","القارعہ","Alqariah_pk.html"],
+["التكاثر","التکاثر","Attakathur_pk.html"],
+["العصر","العصر","Alasr_pk.html"],
+["الهمزة","الہمزہ","Alhumazah_pk.html"],
+["الفيل","الفیل","Alfil_pk.html"],
+["قريش","قریش","Quraysh_pk.html"],
+["الماعون","الماعون","Almaun_pk.html"],
+["الكوثر","الکوثر","Alkawthar_pk.html"],
+["الكافرون","الکافرون","Alkafirun_pk.html"],
+["النصر","النصر","Annasr_pk.html"],
+["المسد","المسد","Almasad_pk.html"],
+["الإخلاص","الاخلاص","Alikhlas_pk.html"],
+["الفلق","الفلق","Alfalaq_pk.html"],
+["الناس","الناس","Annas_pk.html"]
+
+];
+
+const surahList = document.getElementById("surahList");
+
+surahs.forEach((s,index)=>{
+
+  surahList.innerHTML += `
+
+  <div class="surah-card" onclick="openSurah('${s[2]}')">
+
+    <div class="number">${index+1}</div>
+
+    <div class="info">
+      <div class="arabic">${s[0]}</div>
+      <div class="bangla">${s[1]}</div>
+    </div>
+
+  </div>
+
+  `;
+
+});
+
+function openSurah(link){
+  window.location.href = link;
 }
-</script>
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", ()=>{
+
+  let value = searchInput.value.toLowerCase();
+
+  let cards = document.querySelectorAll(".surah-card");
+
+  cards.forEach(card=>{
+
+    let text = card.innerText.toLowerCase();
+
+    if(text.includes(value)){
+      card.style.display="flex";
+    }else{
+      card.style.display="none";
+    }
+
+  });
+
+});
+
+</script></div>
+
+<div class="footer">
+  ✨ For Your App Design Whatsapp +8801854464627
+</div>
 
 </body>
 </html>
