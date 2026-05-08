@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islamic Mission Alert</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at top,#123524 0%,#08140f 70%);
+    font-family:'Segoe UI',sans-serif;
+    overflow:hidden;
+}
+
+.alert-box{
+    width:92%;
+    max-width:430px;
+    background:rgba(12,28,20,0.95);
+    border:1px solid rgba(255,215,120,.25);
+    border-radius:28px;
+    padding:32px 26px;
+    text-align:center;
+    color:#f5f0df;
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+    0 0 30px rgba(0,0,0,.55),
+    0 0 20px rgba(255,215,120,.08);
+
+    animation:popup .6s ease;
+}
+
+.icon{
+    font-size:56px;
+    margin-bottom:18px;
+}
+
+.title{
+    font-size:28px;
+    font-weight:700;
+    color:#ffd978;
+    margin-bottom:18px;
+}
+
+.message{
+    font-size:16px;
+    line-height:1.9;
+    color:#e8dcc0;
+}
+
+.name{
+    color:#fff2b3;
+    font-weight:700;
+}
+
+.highlight{
+    color:#ffd978;
+    font-weight:600;
+}
+
+.dua-box{
+    margin-top:24px;
+    padding:16px;
+    border-radius:18px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,215,120,.12);
+    font-size:15px;
+    line-height:1.8;
+    color:#f3e7c5;
+}
+
+button{
+    margin-top:28px;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(145deg,#ffd978,#d6a93d);
+    color:#102116;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:translateY(25px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="alert-box">
+
+    <div class="icon">🤲🕌</div>
+
+    <div class="title">
+        Assalamu Alaikum
+    </div>
+
+    <div class="message">
+        I am <span class="name">Kamrul Islam Forhad</span>,  
+        and I am still working on this page.  
+        This project is currently <span class="highlight">under development</span>.
+        <br><br>
+        Please make dua for me so that I can complete this mission very soon.
+        May Allah ﷻ accept my efforts, place barakah in this work,
+        and allow this project to become something beneficial for people.
+    </div>
+
+    <div class="dua-box">
+        “May Allah ﷻ make this mission easy, successful,
+        and a source of الخير, peace, and sadaqah jariyah.”
+    </div>
+
+    <button onclick="goBack()">
+        Ameen 🤍
+    </button>
+
+</div>
+
+<script>
+function goBack(){
+    history.back();
+}
+</script>
+
+</body>
+</html>
