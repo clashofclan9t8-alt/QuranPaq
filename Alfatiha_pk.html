@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1,
+maximum-scale=1,
+user-scalable=no">
+<title>Premium Quran UI - Surah Al Fatiha</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Nastaliq+Urdu:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Noto Nastaliq Urdu',serif;
+  min-height:100vh;
+  color:white;
+  overflow-x:hidden;
+
+  background:
+  linear-gradient(rgba(2,12,8,.93),rgba(1,8,5,.95)),
+  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
+
+.container{
+  width:100%;
+  max-width:100%;
+  margin:auto;
+  padding:12px;
+}
+
+.header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.bismillah{
+  font-family:'Amiri',serif;
+  font-size:60px;
+  color:#ffe08a;
+  margin-bottom:15px;
+  width:100%;
+  overflow:hidden;
+  text-align:center;
+  line-height:1.4;
+  word-break:break-word;
+}
+
+.title{
+  font-size:40px;
+  font-weight:700;
+}
+
+.subtitle{
+  margin-top:10px;
+  color:#dfe9df;
+}
+
+.main-card{
+  width:100%;
+  background:rgba(255,255,255,.06);
+  border-radius:22px;
+  padding:14px;
+  backdrop-filter:blur(20px);
+  margin:auto;
+}
+
+.ayah{
+  width:100%;
+  background:rgba(255,255,255,.04);
+  border-radius:22px;
+  padding:16px;
+  margin-bottom:18px;
+  position:relative;
+  overflow:hidden;
+}
+
+.ayah-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.ayah-number{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#ffd76a;
+  color:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+.audio-group{
+  display:flex;
+  gap:10px;
+}
+
+.audio-btn{
+  border:none;
+  background:rgba(255,255,255,.08);
+  color:#00ff2a;
+  padding:10px 14px;
+  border-radius:12px;
+  cursor:pointer;
+  font-family:'Noto Nastaliq Urdu',serif;
+}
+
+.arabic{
+  font-family:'Amiri',serif;
+  font-size:42px;
+  text-align:right;
+  line-height:1.8;
+  color:#ffe9a8;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+
+.word-box{
+  background:rgba(255,255,255,.05);
+  border-radius:20px;
+  padding:18px;
+  margin-bottom:20px;
+}
+
+.word-title{
+  color:#ffd76a;
+  margin-bottom:14px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.word-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:12px;
+}
+
+.word{
+  background:rgba(255,255,255,.06);
+  border-radius:16px;
+  padding:12px;
+  text-align:center;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.word:hover{
+  transform:translateY(-3px);
+  background:rgba(255,215,120,.12);
+}
+
+.word-ar{
+  font-family:'Amiri',serif;
+  font-size:28px;
+  color:#fff2c1;
+  margin-bottom:6px;
+}
+
+.word-pronounce{
+  color:#c9ffd0;
+  margin-bottom:5px;
+  font-size:14px;
+}
+
+.word-bn{
+  font-size:14px;
+}
+
+.pronunciation{
+  background:rgba(255,255,255,.05);
+  border-left:4px solid #ffd76a;
+  padding:16px;
+  border-radius:15px;
+  margin-bottom:20px;
+}
+
+.label{
+  color:#ffd76a;
+  margin-bottom:8px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.pronunciation-text{
+  font-size:22px;
+  line-height:2;
+  font-weight:700;
+  color:#ffe08a;
+  text-shadow:0 0 10px rgba(255,215,120,.2);
+}
+
+.bangla{
+  font-size:24px;
+  line-height:1.9;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.meaning-btn{
+  width:100%;
+  border:none;
+  padding:15px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#ffe08a,#d4a322);
+  color:#111;
+  font-weight:bold;
+  cursor:pointer;
+  font-family:'Noto Nastaliq Urdu',serif;
+}
+
+.meaning{
+  max-height:0;
+  overflow:hidden;
+  transition:.4s;
+  background:rgba(0,0,0,.35);
+  border-radius:16px;
+  margin-top:12px;
+  line-height:2;
+}
+
+.meaning.show{
+  max-height:300px;
+  padding:18px;
+}
+
+body.popup-open{
+  overflow:hidden;
+}
+
+.word-popup{
+  position:fixed;
+  display:none;
+  z-index:999999;
+  background:none;
+  width:auto;
+  height:auto;
+  padding:0;
+}
+
+.word-popup.show{
+  display:block;
+}
+
+.word-popup-box{
+  width:320px;
+  max-width:90vw;
+  background:rgba(15,25,20,.96);
+  border:1px solid rgba(255,215,120,.2);
+  border-radius:28px;
+  padding:25px;
+  backdrop-filter:blur(20px);
+  position:relative;
+}
+
+.close-word-popup{
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:40px;
+  height:40px;
+  border:none;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+  color:white;
+  cursor:pointer;
+  font-size:18px;
+  z-index:10;
+}
+
+.footer{
+  text-align:center;
+  margin-top:30px;
+  color:#d7e5d8;
+}
+
+.developer-text{
+  margin-bottom:20px;
+  line-height:1.9;
+  color:#dfe9df;
+  font-size:15px;
+}
+
+.whatsapp-btn{
+  display:inline-block;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  color:white;
+  font-weight:700;
+  line-height:1.7;
+  transition:.3s;
+  box-shadow:0 10px 30px rgba(37,211,102,.25);
+}
+
+.whatsapp-btn:hover{
+  transform:translateY(-4px) scale(1.02);
+  box-shadow:0 14px 35px rgba(37,211,102,.35);
+}
+
+@media(max-width:600px){
+
+  body{
+    overflow-x:hidden;
+  }
+
+  .container{
+    padding:10px;
+  }
+
+  .main-card{
+    padding:10px;
+    border-radius:18px;
+  }
+
+  .ayah{
+    padding:14px;
+    border-radius:18px;
+  }
+
+  .bismillah{
+    font-size:28px;
+    line-height:1.5;
+    padding:0 10px;
+  }
+
+  .title{
+    font-size:28px;
+  }
+
+  .subtitle{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .arabic{
+    font-size:34px;
+    line-height:1.9;
+  }
+
+  .pronunciation-text{
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .bangla{
+    font-size:18px;
+    line-height:1.8;
+  }
+
+  .audio-group{
+    gap:6px;
+  }
+
+  .audio-btn{
+    padding:8px 10px;
+    font-size:13px;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<div class="bismillah">﷽</div>
+
+<div class="title">
+سورۃ الفاتحہ
+</div>
+
+<div class="subtitle">
+Premium Quran Experience • Arabic • Urdu • Audio
+</div>
+
+</div>
+
+<div class="main-card" id="surahContainer"></div>
+
+<div class="footer">
+
+<div class="developer-box">
+
+<div class="developer-text">
+✨ Crafted with care by <b>K.I Forhad</b>
+</div>
+
+<a
+href="https://wa.me/8801854464627"
+target="_blank"
+class="whatsapp-btn">
+
+💬 Build Your Quran App
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+const ayahs = [
+
+{
+number:1,
+arabic:"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+pronounce:"بسم اللہ الرحمٰن الرحیم",
+bangla:"میں اللہ کے نام سے شروع کرتا ہوں جو نہایت مہربان رحم والا ہے۔",
+tafseer:"ہر اچھے کام کی شروعات اللہ کے نام سے کرنی چاہیے۔",
+audio:"https://everyayah.com/data/Alafasy_128kbps/001001.mp3",
+
+words:[
+["بِسْمِ","بسم","نام سے"],
+["اللَّهِ","اللہ","اللہ کے"],
+["الرَّحْمَٰنِ","الرحمٰن","نہایت مہربان"],
+["الرَّحِيمِ","الرحیم","بہت رحم والا"]
+]
+
+},
+
+{
+number:2,
+arabic:"الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+pronounce:"الحمد للہ رب العالمین",
+bangla:"تمام تعریفیں اللہ کے لیے ہیں جو تمام جہانوں کا رب ہے۔",
+tafseer:"ہر قسم کی تعریف صرف اللہ ہی کے لیے ہے۔",
+audio:"https://everyayah.com/data/Alafasy_128kbps/001002.mp3",
+
+words:[
+["الْحَمْدُ","الحمد","تمام تعریف"],
+["لِلَّهِ","للہ","اللہ کے لیے"],
+["رَبِّ","رب","پروردگار"],
+["الْعَالَمِينَ","العالمین","تمام جہان"]
+]
+
+},
+
+{
+number:3,
+arabic:"الرَّحْمَٰنِ الرَّحِيمِ",
+pronounce:"الرحمٰن الرحیم",
+bangla:"وہ نہایت مہربان رحم والا ہے۔",
+tafseer:"اللہ بے حد مہربان اور رحم کرنے والا ہے۔",
+audio:"https://everyayah.com/data/Alafasy_128kbps/001003.mp3",
+
+words:[
+["الرَّحْمَٰنِ","الرحمٰن","نہایت مہربان"],
+["الرَّحِيمِ","الرحیم","بہت رحم والا"]
+]
+
+},
+
+{
+number:4,
+arabic:"مَالِكِ يَوْمِ الدِّينِ",
+pronounce:"مالک یوم الدین",
+bangla:"بدلے کے دن کا مالک۔",
+tafseer:"قیامت کے دن کا مکمل اختیار صرف اللہ کے پاس ہے۔",
+audio:"https://everyayah.com/data/Alafasy_128kbps/001004.mp3",
+
+words:[
+["مَالِكِ","مالک","مالک"],
+["يَوْمِ","یوم","دن"],
+["الدِّينِ","الدین","بدلہ"]
+]
+
+},
+
+{
+number:5,
+arabic:"إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+pronounce:"ایاک نعبد و ایاک نستعین",
+bangla:"ہم صرف تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔",
+tafseer:"عبادت اور مدد صرف اللہ ہی سے مانگنی چاہیے۔",
+audio:"https://everyayah.com/data/Alafasy_128kbps/001005.mp3",
+
+words:[
+["إِيَّاكَ","ایاک","صرف تجھ کو"],
+["نَعْبُدُ","نعبد","ہم عبادت کرتے ہیں"],
+["وَإِيَّاكَ","و ایاک","اور صرف تجھ کو"],
+["نَسْتَعِينُ","نستعین","ہم مدد مانگتے ہیں"]
+]
+
+},
+
+{
+number:6,
+arabic:"اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ",
+pronounce:"اہدنا الصراط المستقیم",
+bangla:"ہمیں سیدھا راستہ دکھا۔",
+tafseer:"اللہ سے صحیح راستے کی ہدایت مانگنا۔",
+audio:"https://everyayah.com/data/Alafasy_128kbps/001006.mp3",
+
+words:[
+["اهْدِنَا","اہدنا","ہمیں ہدایت دے"],
+["الصِّرَاطَ","الصراط","راستہ"],
+["الْمُسْتَقِيمَ","المستقیم","سیدھا"]
+]
+
+},
+
+{
+number:7,
+arabic:"صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+pronounce:"صراط الذین انعمت علیہم غیر المغضوب علیہم ولا الضالین",
+bangla:"ان لوگوں کا راستہ جن پر تو نے انعام فرمایا، نہ کہ ان کا جن پر غضب ہوا اور نہ گمراہوں کا۔",
+tafseer:"نیک لوگوں کے راستے پر چلنے اور گمراہ لوگوں سے بچنے کی دعا۔",
+audio:"https://everyayah.com/data/Alafasy_128kbps/001007.mp3",
+
+words:[
+["صِرَاطَ","صراط","راستہ"],
+["الَّذِينَ","الذین","جو لوگ"],
+["أَنْعَمْتَ","انعمت","تو نے انعام فرمایا"],
+["عَلَيْهِمْ","علیہم","ان پر"],
+["غَيْرِ","غیر","نہیں"],
+["الْمَغْضُوبِ","المغضوب","غضب کیے گئے"],
+["وَلَا","ولا","اور نہ"],
+["الضَّالِّينَ","الضالین","گمراہ"]
+]
+
+}
+
+];
+
+const container =
+document.getElementById("surahContainer");
+
+ayahs.forEach((ayah,index)=>{
+
+let wordsHTML = "";
+
+ayah.words.forEach(word=>{
+
+wordsHTML += `
+
+<div class="word">
+
+<div class="word-ar">
+${word[0]}
+</div>
+
+<div class="word-pronounce">
+${word[1]}
+</div>
+
+<div class="word-bn">
+${word[2]}
+</div>
+
+</div>
+
+`;
+
+});
+
+container.innerHTML += `
+
+<div class="ayah">
+
+<div class="ayah-top">
+
+<div class="ayah-number">
+${ayah.number}
+</div>
+
+<div class="audio-group">
+
+<button
+class="audio-btn"
+onclick="document.getElementById('audio${index}').play()">
+
+🔊 عربی
+
+</button>
+
+<button
+class="audio-btn"
+onclick="openWordsPopup('words${index}', this)">
+
+📖 الفاظ
+
+</button>
+
+</div>
+
+</div>
+
+<div class="arabic">
+${ayah.arabic}
+</div>
+
+<div class="pronunciation">
+
+<div class="label">
+اردو تلفظ
+</div>
+
+<div class="pronunciation-text">
+${ayah.pronounce}
+</div>
+
+</div>
+
+<div class="label">
+اردو ترجمہ
+</div>
+
+<div class="bangla">
+${ayah.bangla}
+</div>
+
+<button
+class="meaning-btn"
+onclick="toggleMeaning(this)">
+
+تشریح دیکھیں
+
+</button>
+
+<div class="meaning">
+${ayah.tafseer}
+</div>
+
+</div>
+
+<audio id="audio${index}">
+<source src="${ayah.audio}" type="audio/mpeg">
+</audio>
+
+</div>
+
+<div class="word-popup" id="words${index}">
+
+<div class="word-popup-box">
+
+<button
+class="close-word-popup"
+onclick="closeWordsPopup('words${index}')">
+
+✕
+
+</button>
+
+<div class="word-grid">
+
+${wordsHTML}
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+function toggleMeaning(button){
+
+const meaning = button.nextElementSibling;
+meaning.classList.toggle("show");
+
+}
+
+function openWordsPopup(id, btn){
+
+const popup =
+document.getElementById(id);
+
+const rect =
+btn.getBoundingClientRect();
+
+popup.classList.add("show");
+
+popup.style.position = "fixed";
+
+popup.style.top =
+(rect.bottom + 10) + "px";
+
+popup.style.left =
+rect.left + "px";
+
+const popupWidth = 320;
+
+if(rect.left + popupWidth > window.innerWidth){
+
+popup.style.left =
+(window.innerWidth - popupWidth - 15) + "px";
+
+}
+
+}
+
+function closeWordsPopup(id){
+
+const popup = document.getElementById(id);
+
+popup.classList.remove("show");
+
+}
+
+</script>
+
+</body>
+</html>
