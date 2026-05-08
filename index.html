@@ -324,135 +324,6 @@ body.loading{
 .list{
   transition:1s ease;
 }
-
-
-
-
-/* 🌙 Islamic Popup */
-
-.dua-popup{
-  position:fixed;
-  inset:0;
-
-  background:rgba(0,0,0,0.72);
-
-  backdrop-filter:blur(8px);
-
-  display:none;
-  justify-content:center;
-  align-items:center;
-
-  z-index:999999;
-}
-
-.dua-popup-box{
-  position:relative;
-
-  width:90%;
-  max-width:420px;
-
-  padding:35px 25px;
-
-  border-radius:28px;
-
-  overflow:hidden;
-
-  background:
-  linear-gradient(
-    145deg,
-    rgba(10,20,40,0.96),
-    rgba(5,12,28,0.96)
-  );
-
-  border:1px solid rgba(255,215,120,0.35);
-
-  box-shadow:
-  0 0 30px rgba(255,215,120,0.15),
-  0 0 80px rgba(255,180,50,0.08);
-
-  text-align:center;
-
-  animation:popupShow 0.35s ease;
-}
-
-.popup-glow{
-  position:absolute;
-  top:-100px;
-  left:-100px;
-
-  width:240px;
-  height:240px;
-
-  background:radial-gradient(
-    rgba(255,215,120,0.22),
-    transparent 70%
-  );
-}
-
-.popup-title{
-  color:#ffd777;
-
-  font-size:28px;
-  font-weight:bold;
-
-  margin-bottom:20px;
-
-  text-shadow:
-  0 0 12px rgba(255,215,120,0.5);
-}
-
-.popup-text{
-  color:white;
-
-  font-size:18px;
-  line-height:1.8;
-
-  margin-bottom:28px;
-}
-
-.popup-btn{
-  border:none;
-  outline:none;
-
-  padding:12px 35px;
-
-  border-radius:50px;
-
-  background:
-  linear-gradient(
-    135deg,
-    #ffd777,
-    #ffb347
-  );
-
-  color:#111;
-
-  font-size:17px;
-  font-weight:bold;
-
-  cursor:pointer;
-
-  transition:0.3s;
-}
-
-.popup-btn:hover{
-  transform:scale(1.05);
-}
-
-@keyframes popupShow{
-
-  from{
-    opacity:0;
-    transform:scale(0.8);
-  }
-
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
-
-}
-
 </style>
 </head>
 
@@ -480,1236 +351,1075 @@ body.loading{
 <div class="list" id="countryList">
 
   <!-- SAME YOUR COUNTRY LIST (short demo) -->
-
-
-
- <a href="Afghanistan.html" class="country-link" onclick="return openCountry(event, 'Afghanistan.html')">
+```html
+<a href="Afghanistan.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/af.png" class="flag">
 <div class="country-name">Afghanistan</div>
 </div>
 </a>
 
-<a href="Albania.html" class="country-link" onclick="return openCountry(event, 'Albania.html')">
+<a href="Albania.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/al.png" class="flag">
 <div class="country-name">Albania</div>
 </div>
 </a>
 
-<a href="Algeria.html" class="country-link" onclick="return openCountry(event, 'Algeria.html')">
+<a href="Algeria.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/dz.png" class="flag">
 <div class="country-name">Algeria</div>
 </div>
 </a>
 
-<a href="Andorra.html" class="country-link" onclick="return openCountry(event, 'Andorra.html')">
+<a href="Andorra.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ad.png" class="flag">
 <div class="country-name">Andorra</div>
 </div>
 </a>
 
-<a href="Angola.html" class="country-link" onclick="return openCountry(event, 'Angola.html')">
+<a href="Angola.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ao.png" class="flag">
 <div class="country-name">Angola</div>
 </div>
 </a>
 
-<a href="AntiguaAndDeps.html" class="country-link" onclick="return openCountry(event, 'AntiguaAndDeps.html')">
+<a href="AntiguaAndDeps.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ag.png" class="flag">
 <div class="country-name">Antigua & Deps</div>
 </div>
 </a>
 
-<a href="Argentina.html" class="country-link" onclick="return openCountry(event, 'Argentina.html')">
+<a href="Argentina.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ar.png" class="flag">
 <div class="country-name">Argentina</div>
 </div>
 </a>
 
-<a href="Armenia.html" class="country-link" onclick="return openCountry(event, 'Armenia.html')">
+<a href="Armenia.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/am.png" class="flag">
 <div class="country-name">Armenia</div>
 </div>
 </a>
 
-<a href="Australia.html" class="country-link" onclick="return openCountry(event, 'Australia.html')">
+<a href="Australia.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/au.png" class="flag">
 <div class="country-name">Australia</div>
 </div>
 </a>
 
-<a href="Austria.html" class="country-link" onclick="return openCountry(event, 'Austria.html')">
+<a href="Austria.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/at.png" class="flag">
 <div class="country-name">Austria</div>
 </div>
 </a>
 
-<a href="Azerbaijan.html" class="country-link" onclick="return openCountry(event, 'Azerbaijan.html')">
+<a href="Azerbaijan.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/az.png" class="flag">
 <div class="country-name">Azerbaijan</div>
 </div>
 </a>
 
-<a href="Bahamas.html" class="country-link" onclick="return openCountry(event, 'Bahamas.html')">
+<a href="Bahamas.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/bs.png" class="flag">
 <div class="country-name">Bahamas</div>
 </div>
 </a>
 
-<a href="Bahrain.html" class="country-link" onclick="return openCountry(event, 'Bahrain.html')">
+<a href="Bahrain.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/bh.png" class="flag">
 <div class="country-name">Bahrain</div>
 </div>
 </a>
-<a href="Bangladesh.html" class="country-link" onclick="return openCountry(event, 'Bangladesh.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/bd.png" class="flag">
-<div class="country-name">Bangladesh</div>
-</div>
-</a>
+```
 
-<a href="Barbados.html" class="country-link" onclick="return openCountry(event, 'Barbados.html')">
+<a href="Bangladesh.html" class="country-link">
+
+  <div class="country-card">
+    <img src="https://flagcdn.com/w80/bd.png" class="flag">
+
+    <div class="country-name">
+      Bangladesh
+    </div>
+  </div>
+
+</a>
+<a href="Barbados.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bb.png" class="flag">
 <div class="country-name">Barbados</div>
 </div>
 </a>
 
-<a href="Belarus.html" class="country-link" onclick="return openCountry(event, 'Belarus.html')">
+<a href="Belarus.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/by.png" class="flag">
 <div class="country-name">Belarus</div>
 </div>
 </a>
 
-<a href="Belgium.html" class="country-link" onclick="return openCountry(event, 'Belgium.html')">
+<a href="Belgium.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/be.png" class="flag">
 <div class="country-name">Belgium</div>
 </div>
 </a>
 
-<a href="Belize.html" class="country-link" onclick="return openCountry(event, 'Belize.html')">
+<a href="Belize.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bz.png" class="flag">
 <div class="country-name">Belize</div>
 </div>
 </a>
 
-<a href="Benin.html" class="country-link" onclick="return openCountry(event, 'Benin.html')">
+<a href="Benin.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bj.png" class="flag">
 <div class="country-name">Benin</div>
 </div>
 </a>
 
-<a href="Bhutan.html" class="country-link" onclick="return openCountry(event, 'Bhutan.html')">
+<a href="Bhutan.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bt.png" class="flag">
 <div class="country-name">Bhutan</div>
 </div>
 </a>
 
-<a href="Bolivia.html" class="country-link" onclick="return openCountry(event, 'Bolivia.html')">
+<a href="Bolivia.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bo.png" class="flag">
 <div class="country-name">Bolivia</div>
 </div>
 </a>
 
-<a href="BosniaHerzegovina.html" class="country-link" onclick="return openCountry(event, 'BosniaHerzegovina.html')">
+<a href="BosniaHerzegovina.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ba.png" class="flag">
 <div class="country-name">Bosnia Herzegovina</div>
 </div>
 </a>
 
-<a href="Botswana.html" class="country-link" onclick="return openCountry(event, 'Botswana.html')">
+<a href="Botswana.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bw.png" class="flag">
 <div class="country-name">Botswana</div>
 </div>
 </a>
 
-<a href="Brazil.html" class="country-link" onclick="return openCountry(event, 'Brazil.html')">
+<a href="Brazil.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/br.png" class="flag">
 <div class="country-name">Brazil</div>
 </div>
 </a>
 
-<a href="Brunei.html" class="country-link" onclick="return openCountry(event, 'Brunei.html')">
+<a href="Brunei.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bn.png" class="flag">
 <div class="country-name">Brunei</div>
 </div>
 </a>
 
-<a href="Bulgaria.html" class="country-link" onclick="return openCountry(event, 'Bulgaria.html')">
+<a href="Bulgaria.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bg.png" class="flag">
 <div class="country-name">Bulgaria</div>
 </div>
 </a>
 
-<a href="BurkinaFaso.html" class="country-link" onclick="return openCountry(event, 'BurkinaFaso.html')">
+<a href="BurkinaFaso.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bf.png" class="flag">
 <div class="country-name">Burkina Faso</div>
 </div>
 </a>
-
-<a href="Burundi.html" class="country-link" onclick="return openCountry(event, 'Burundi.html')">
+<a href="Burundi.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bi.png" class="flag">
 <div class="country-name">Burundi</div>
 </div>
 </a>
 
-<a href="Cambodia.html" class="country-link" onclick="return openCountry(event, 'Cambodia.html')">
+<a href="Cambodia.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/kh.png" class="flag">
 <div class="country-name">Cambodia</div>
 </div>
 </a>
 
-<a href="Cameroon.html" class="country-link" onclick="return openCountry(event, 'Cameroon.html')">
+<a href="Cameroon.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cm.png" class="flag">
 <div class="country-name">Cameroon</div>
 </div>
 </a>
 
-<a href="Canada.html" class="country-link" onclick="return openCountry(event, 'Canada.html')">
+<a href="Canada.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ca.png" class="flag">
 <div class="country-name">Canada</div>
 </div>
 </a>
 
-<a href="CapeVerde.html" class="country-link" onclick="return openCountry(event, 'CapeVerde.html')">
+<a href="CapeVerde.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cv.png" class="flag">
 <div class="country-name">Cape Verde</div>
 </div>
 </a>
 
-<a href="CentralAfricanRepublic.html" class="country-link" onclick="return openCountry(event, 'CentralAfricanRepublic.html')">
+<a href="CentralAfricanRepublic.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cf.png" class="flag">
 <div class="country-name">Central African Republic</div>
 </div>
 </a>
 
-<a href="Chad.html" class="country-link" onclick="return openCountry(event, 'Chad.html')">
+<a href="Chad.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/td.png" class="flag">
 <div class="country-name">Chad</div>
 </div>
 </a>
 
-<a href="Chile.html" class="country-link" onclick="return openCountry(event, 'Chile.html')">
+<a href="Chile.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cl.png" class="flag">
 <div class="country-name">Chile</div>
 </div>
 </a>
 
-<a href="China.html" class="country-link" onclick="return openCountry(event, 'China.html')">
+<a href="China.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cn.png" class="flag">
 <div class="country-name">China</div>
 </div>
 </a>
 
-<a href="Colombia.html" class="country-link" onclick="return openCountry(event, 'Colombia.html')">
+<a href="Colombia.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/co.png" class="flag">
 <div class="country-name">Colombia</div>
 </div>
 </a>
 
-<a href="Comoros.html" class="country-link" onclick="return openCountry(event, 'Comoros.html')">
+<a href="Comoros.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/km.png" class="flag">
 <div class="country-name">Comoros</div>
 </div>
 </a>
-
-<a href="Congo.html" class="country-link" onclick="return openCountry(event, 'Congo.html')">
+<a href="Congo.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cg.png" class="flag">
 <div class="country-name">Congo</div>
 </div>
 </a>
 
-<a href="CongoDR.html" class="country-link" onclick="return openCountry(event, 'CongoDR.html')">
+<a href="CongoDR.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cd.png" class="flag">
 <div class="country-name">Congo (DR)</div>
 </div>
 </a>
 
-<a href="CostaRica.html" class="country-link" onclick="return openCountry(event, 'CostaRica.html')">
+<a href="CostaRica.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cr.png" class="flag">
 <div class="country-name">Costa Rica</div>
 </div>
 </a>
 
-<a href="Croatia.html" class="country-link" onclick="return openCountry(event, 'Croatia.html')">
+<a href="Croatia.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/hr.png" class="flag">
 <div class="country-name">Croatia</div>
 </div>
 </a>
 
-<a href="Cuba.html" class="country-link" onclick="return openCountry(event, 'Cuba.html')">
+<a href="Cuba.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cu.png" class="flag">
 <div class="country-name">Cuba</div>
 </div>
 </a>
 
-<a href="Cyprus.html" class="country-link" onclick="return openCountry(event, 'Cyprus.html')">
+<a href="Cyprus.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/cy.png" class="flag">
 <div class="country-name">Cyprus</div>
 </div>
 </a>
-<a href="CzechRepublic.html" class="country-link" onclick="return openCountry(event, 'CzechRepublic.html')">
+
+<a href="CzechRepublic.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/cz.png" class="flag">
 <div class="country-name">Czech Republic</div>
 </div>
 </a>
 
-<a href="Denmark.html" class="country-link" onclick="return openCountry(event, 'Denmark.html')">
+<a href="Denmark.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/dk.png" class="flag">
 <div class="country-name">Denmark</div>
 </div>
 </a>
 
-<a href="Djibouti.html" class="country-link" onclick="return openCountry(event, 'Djibouti.html')">
+<a href="Djibouti.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/dj.png" class="flag">
 <div class="country-name">Djibouti</div>
 </div>
 </a>
 
-<a href="Dominica.html" class="country-link" onclick="return openCountry(event, 'Dominica.html')">
+<a href="Dominica.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/dm.png" class="flag">
 <div class="country-name">Dominica</div>
 </div>
 </a>
 
-<a href="DominicanRepublic.html" class="country-link" onclick="return openCountry(event, 'DominicanRepublic.html')">
+<a href="DominicanRepublic.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/do.png" class="flag">
 <div class="country-name">Dominican Republic</div>
 </div>
 </a>
 
-<a href="EastTimor.html" class="country-link" onclick="return openCountry(event, 'EastTimor.html')">
+<a href="EastTimor.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/tl.png" class="flag">
 <div class="country-name">East Timor</div>
 </div>
 </a>
 
-<a href="Ecuador.html" class="country-link" onclick="return openCountry(event, 'Ecuador.html')">
+<a href="Ecuador.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ec.png" class="flag">
 <div class="country-name">Ecuador</div>
 </div>
 </a>
 
-<a href="Egypt.html" class="country-link" onclick="return openCountry(event, 'Egypt.html')">
+<a href="Egypt.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/eg.png" class="flag">
 <div class="country-name">Egypt</div>
 </div>
 </a>
 
-<a href="ElSalvador.html" class="country-link" onclick="return openCountry(event, 'ElSalvador.html')">
+<a href="ElSalvador.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/sv.png" class="flag">
 <div class="country-name">El Salvador</div>
 </div>
 </a>
 
-<a href="EquatorialGuinea.html" class="country-link" onclick="return openCountry(event, 'EquatorialGuinea.html')">
+<a href="EquatorialGuinea.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gq.png" class="flag">
 <div class="country-name">Equatorial Guinea</div>
 </div>
 </a>
 
-<a href="Eritrea.html" class="country-link" onclick="return openCountry(event, 'Eritrea.html')">
+<a href="Eritrea.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/er.png" class="flag">
 <div class="country-name">Eritrea</div>
 </div>
 </a>
 
-<a href="Estonia.html" class="country-link" onclick="return openCountry(event, 'Estonia.html')">
+<a href="Estonia.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ee.png" class="flag">
 <div class="country-name">Estonia</div>
 </div>
 </a>
 
-<a href="Ethiopia.html" class="country-link" onclick="return openCountry(event, 'Ethiopia.html')">
+<a href="Ethiopia.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/et.png" class="flag">
 <div class="country-name">Ethiopia</div>
 </div>
 </a>
 
-<a href="Fiji.html" class="country-link" onclick="return openCountry(event, 'Fiji.html')">
+<a href="Fiji.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/fj.png" class="flag">
 <div class="country-name">Fiji</div>
 </div>
 </a>
 
-<a href="Finland.html" class="country-link" onclick="return openCountry(event, 'Finland.html')">
+<a href="Finland.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/fi.png" class="flag">
 <div class="country-name">Finland</div>
 </div>
 </a>
 
-<a href="France.html" class="country-link" onclick="return openCountry(event, 'France.html')">
+<a href="France.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/fr.png" class="flag">
 <div class="country-name">France</div>
 </div>
 </a>
 
-<a href="Gabon.html" class="country-link" onclick="return openCountry(event, 'Gabon.html')">
+<a href="Gabon.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ga.png" class="flag">
 <div class="country-name">Gabon</div>
 </div>
 </a>
 
-<a href="Gambia.html" class="country-link" onclick="return openCountry(event, 'Gambia.html')">
+<a href="Gambia.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gm.png" class="flag">
 <div class="country-name">Gambia</div>
 </div>
 </a>
-<a href="Georgia.html" class="country-link" onclick="return openCountry(event, 'Georgia.html')">
+
+<a href="Georgia.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ge.png" class="flag">
 <div class="country-name">Georgia</div>
 </div>
 </a>
 
-<a href="Germany.html" class="country-link" onclick="return openCountry(event, 'Germany.html')">
+<a href="Germany.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/de.png" class="flag">
 <div class="country-name">Germany</div>
 </div>
 </a>
 
-<a href="Ghana.html" class="country-link" onclick="return openCountry(event, 'Ghana.html')">
+<a href="Ghana.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gh.png" class="flag">
 <div class="country-name">Ghana</div>
 </div>
 </a>
 
-<a href="Greece.html" class="country-link" onclick="return openCountry(event, 'Greece.html')">
+<a href="Greece.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gr.png" class="flag">
 <div class="country-name">Greece</div>
 </div>
 </a>
 
-<a href="Grenada.html" class="country-link" onclick="return openCountry(event, 'Grenada.html')">
+<a href="Grenada.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gd.png" class="flag">
 <div class="country-name">Grenada</div>
 </div>
 </a>
 
-<a href="Guatemala.html" class="country-link" onclick="return openCountry(event, 'Guatemala.html')">
+<a href="Guatemala.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gt.png" class="flag">
 <div class="country-name">Guatemala</div>
 </div>
 </a>
 
-<a href="Guinea.html" class="country-link" onclick="return openCountry(event, 'Guinea.html')">
+<a href="Guinea.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gn.png" class="flag">
 <div class="country-name">Guinea</div>
 </div>
 </a>
 
-<a href="GuineaBissau.html" class="country-link" onclick="return openCountry(event, 'GuineaBissau.html')">
+<a href="GuineaBissau.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gw.png" class="flag">
 <div class="country-name">Guinea-Bissau</div>
 </div>
 </a>
 
-<a href="Guyana.html" class="country-link" onclick="return openCountry(event, 'Guyana.html')">
+<a href="Guyana.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/gy.png" class="flag">
 <div class="country-name">Guyana</div>
 </div>
 </a>
 
-<a href="Haiti.html" class="country-link" onclick="return openCountry(event, 'Haiti.html')">
+<a href="Haiti.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ht.png" class="flag">
 <div class="country-name">Haiti</div>
 </div>
 </a>
 
-<a href="Honduras.html" class="country-link" onclick="return openCountry(event, 'Honduras.html')">
+<a href="Honduras.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/hn.png" class="flag">
 <div class="country-name">Honduras</div>
 </div>
 </a>
+```
 
-<a href="Hungary.html" class="country-link" onclick="return openCountry(event, 'Hungary.html')">
+<a href="Hungary.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/hu.png" class="flag">
 <div class="country-name">Hungary</div>
 </div>
 </a>
 
-<a href="Iceland.html" class="country-link" onclick="return openCountry(event, 'Iceland.html')">
+<a href="Iceland.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/is.png" class="flag">
 <div class="country-name">Iceland</div>
 </div>
 </a>
 
-<a href="India.html" class="country-link" onclick="return openCountry(event, 'India.html')">
+<a href="India.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/in.png" class="flag">
 <div class="country-name">India</div>
 </div>
 </a>
 
-<a href="Indonesia.html" class="country-link" onclick="return openCountry(event, 'Indonesia.html')">
+<a href="Indonesia.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/id.png" class="flag">
 <div class="country-name">Indonesia</div>
 </div>
 </a>
 
-<a href="Iran.html" class="country-link" onclick="return openCountry(event, 'Iran.html')">
+<a href="Iran.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ir.png" class="flag">
 <div class="country-name">Iran</div>
 </div>
 </a>
 
-<a href="Iraq.html" class="country-link" onclick="return openCountry(event, 'Iraq.html')">
+<a href="Iraq.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/iq.png" class="flag">
 <div class="country-name">Iraq</div>
 </div>
 </a>
 
-<a href="Ireland.html" class="country-link" onclick="return openCountry(event, 'Ireland.html')">
+<a href="Ireland.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ie.png" class="flag">
 <div class="country-name">Ireland</div>
 </div>
 </a>
 
-<a href="Israel.html" class="country-link" onclick="return openCountry(event, 'Israel.html')">
+<a href="Israel.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/il.png" class="flag">
 <div class="country-name">Israel</div>
 </div>
 </a>
 
-<a href="Italy.html" class="country-link" onclick="return openCountry(event, 'Italy.html')">
+<a href="Italy.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/it.png" class="flag">
 <div class="country-name">Italy</div>
 </div>
 </a>
 
-<a href="IvoryCoast.html" class="country-link" onclick="return openCountry(event, 'IvoryCoast.html')">
+<a href="IvoryCoast.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/ci.png" class="flag">
 <div class="country-name">Ivory Coast</div>
 </div>
 </a>
 
-<a href="Jamaica.html" class="country-link" onclick="return openCountry(event, 'Jamaica.html')">
+<a href="Jamaica.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/jm.png" class="flag">
 <div class="country-name">Jamaica</div>
 </div>
 </a>
 
-<a href="Japan.html" class="country-link" onclick="return openCountry(event, 'Japan.html')">
+<a href="Japan.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/jp.png" class="flag">
 <div class="country-name">Japan</div>
 </div>
 </a>
 
-<a href="Jordan.html" class="country-link" onclick="return openCountry(event, 'Jordan.html')">
+<a href="Jordan.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/jo.png" class="flag">
 <div class="country-name">Jordan</div>
 </div>
 </a>
 
-<a href="Kazakhstan.html" class="country-link" onclick="return openCountry(event, 'Kazakhstan.html')">
+<a href="Kazakhstan.html" class="country-link">
 <div class="country-card">
+<img src="https://flagcdn.com/w80/kz.png" class="flag">
 <div class="country-name">Kazakhstan</div>
 </div>
 </a>
 
-<a href="Kenya.html" class="country-link" onclick="return openCountry(event, 'Kenya.html')">
+<a href="Kenya.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ke.png" class="flag">
 <div class="country-name">Kenya</div>
 </div>
 </a>
 
-<a href="Kiribati.html" class="country-link" onclick="return openCountry(event, 'Kiribati.html')">
+<a href="Kiribati.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ki.png" class="flag">
 <div class="country-name">Kiribati</div>
 </div>
 </a>
 
-<a href="KoreaNorth.html" class="country-link" onclick="return openCountry(event, 'KoreaNorth.html')">
+<a href="KoreaNorth.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/kp.png" class="flag">
 <div class="country-name">Korea North</div>
 </div>
 </a>
 
-<a href="KoreaSouth.html" class="country-link" onclick="return openCountry(event, 'KoreaSouth.html')">
+<a href="KoreaSouth.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/kr.png" class="flag">
 <div class="country-name">Korea South</div>
 </div>
 </a>
 
-<a href="Kosovo.html" class="country-link" onclick="return openCountry(event, 'Kosovo.html')">
+<a href="Kosovo.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/xk.png" class="flag">
 <div class="country-name">Kosovo</div>
 </div>
 </a>
 
-<a href="Kuwait.html" class="country-link" onclick="return openCountry(event, 'Kuwait.html')">
+<a href="Kuwait.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/kw.png" class="flag">
 <div class="country-name">Kuwait</div>
 </div>
 </a>
 
-<a href="Kyrgyzstan.html" class="country-link" onclick="return openCountry(event, 'Kyrgyzstan.html')">
+<a href="Kyrgyzstan.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/kg.png" class="flag">
 <div class="country-name">Kyrgyzstan</div>
 </div>
 </a>
-
-<a href="Laos.html" class="country-link" onclick="return openCountry(event, 'Laos.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/la.png" class="flag">
-<div class="country-name">Laos</div>
+<div class="country-card" onclick="window.location.href='Laos.html'">
+  <img src="https://flagcdn.com/w80/la.png" class="flag">
+  <div class="country-name">Laos</div>
 </div>
-</a>
 
-<a href="Latvia.html" class="country-link" onclick="return openCountry(event, 'Latvia.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/lv.png" class="flag">
-<div class="country-name">Latvia</div>
+<div class="country-card" onclick="window.location.href='Latvia.html'">
+  <img src="https://flagcdn.com/w80/lv.png" class="flag">
+  <div class="country-name">Latvia</div>
 </div>
-</a>
 
-<a href="Lebanon.html" class="country-link" onclick="return openCountry(event, 'Lebanon.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/lb.png" class="flag">
-<div class="country-name">Lebanon</div>
+<div class="country-card" onclick="window.location.href='Lebanon.html'">
+  <img src="https://flagcdn.com/w80/lb.png" class="flag">
+  <div class="country-name">Lebanon</div>
 </div>
-</a>
 
-<a href="Lesotho.html" class="country-link" onclick="return openCountry(event, 'Lesotho.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/ls.png" class="flag">
-<div class="country-name">Lesotho</div>
+<div class="country-card" onclick="window.location.href='Lesotho.html'">
+  <img src="https://flagcdn.com/w80/ls.png" class="flag">
+  <div class="country-name">Lesotho</div>
 </div>
-</a>
 
-<a href="Liberia.html" class="country-link" onclick="return openCountry(event, 'Liberia.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/lr.png" class="flag">
-<div class="country-name">Liberia</div>
+<div class="country-card" onclick="window.location.href='Liberia.html'">
+  <img src="https://flagcdn.com/w80/lr.png" class="flag">
+  <div class="country-name">Liberia</div>
 </div>
-</a>
 
-<a href="Libya.html" class="country-link" onclick="return openCountry(event, 'Libya.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/ly.png" class="flag">
-<div class="country-name">Libya</div>
+<div class="country-card" onclick="window.location.href='Libya.html'">
+  <img src="https://flagcdn.com/w80/ly.png" class="flag">
+  <div class="country-name">Libya</div>
 </div>
-</a>
 
-<a href="Liechtenstein.html" class="country-link" onclick="return openCountry(event, 'Liechtenstein.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/li.png" class="flag">
-<div class="country-name">Liechtenstein</div>
+<div class="country-card" onclick="window.location.href='Liechtenstein.html'">
+  <img src="https://flagcdn.com/w80/li.png" class="flag">
+  <div class="country-name">Liechtenstein</div>
 </div>
-</a>
 
-<a href="Lithuania.html" class="country-link" onclick="return openCountry(event, 'Lithuania.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/lt.png" class="flag">
-<div class="country-name">Lithuania</div>
+<div class="country-card" onclick="window.location.href='Lithuania.html'">
+  <img src="https://flagcdn.com/w80/lt.png" class="flag">
+  <div class="country-name">Lithuania</div>
 </div>
-</a>
 
-<a href="Luxembourg.html" class="country-link" onclick="return openCountry(event, 'Luxembourg.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/lu.png" class="flag">
-<div class="country-name">Luxembourg</div>
+<div class="country-card" onclick="window.location.href='Luxembourg.html'">
+  <img src="https://flagcdn.com/w80/lu.png" class="flag">
+  <div class="country-name">Luxembourg</div>
 </div>
-</a>
 
-<a href="Macedonia.html" class="country-link" onclick="return openCountry(event, 'Macedonia.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/mk.png" class="flag">
-<div class="country-name">Macedonia</div>
+<div class="country-card" onclick="window.location.href='Macedonia.html'">
+  <img src="https://flagcdn.com/w80/mk.png" class="flag">
+  <div class="country-name">Macedonia</div>
 </div>
-</a>
 
-<a href="Madagascar.html" class="country-link" onclick="return openCountry(event, 'Madagascar.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/mg.png" class="flag">
-<div class="country-name">Madagascar</div>
+<div class="country-card" onclick="window.location.href='Madagascar.html'">
+  <img src="https://flagcdn.com/w80/mg.png" class="flag">
+  <div class="country-name">Madagascar</div>
 </div>
-</a>
 
-<a href="Malawi.html" class="country-link" onclick="return openCountry(event, 'Malawi.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/mw.png" class="flag">
-<div class="country-name">Malawi</div>
+<div class="country-card" onclick="window.location.href='Malawi.html'">
+  <img src="https://flagcdn.com/w80/mw.png" class="flag">
+  <div class="country-name">Malawi</div>
 </div>
-</a>
 
-<a href="Malaysia.html" class="country-link" onclick="return openCountry(event, 'Malaysia.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/my.png" class="flag">
-<div class="country-name">Malaysia</div>
+<div class="country-card" onclick="window.location.href='Malaysia.html'">
+  <img src="https://flagcdn.com/w80/my.png" class="flag">
+  <div class="country-name">Malaysia</div>
 </div>
-</a>
 
-<a href="Maldives.html" class="country-link" onclick="return openCountry(event, 'Maldives.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/mv.png" class="flag">
-<div class="country-name">Maldives</div>
+<div class="country-card" onclick="window.location.href='Maldives.html'">
+  <img src="https://flagcdn.com/w80/mv.png" class="flag">
+  <div class="country-name">Maldives</div>
 </div>
-</a>
 
-<a href="Mali.html" class="country-link" onclick="return openCountry(event, 'Mali.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/ml.png" class="flag">
-<div class="country-name">Mali</div>
+<div class="country-card" onclick="window.location.href='Mali.html'">
+  <img src="https://flagcdn.com/w80/ml.png" class="flag">
+  <div class="country-name">Mali</div>
 </div>
-</a>
 
-<a href="Malta.html" class="country-link" onclick="return openCountry(event, 'Malta.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/mt.png" class="flag">
-<div class="country-name">Malta</div>
+<div class="country-card" onclick="window.location.href='Malta.html'">
+  <img src="https://flagcdn.com/w80/mt.png" class="flag">
+  <div class="country-name">Malta</div>
 </div>
-</a>
 
-<a href="Marshall-Islands.html" class="country-link" onclick="return openCountry(event, 'Marshall-Islands.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/mh.png" class="flag">
-<div class="country-name">Marshall Islands</div>
+<div class="country-card" onclick="window.location.href='Marshall-Islands.html'">
+  <img src="https://flagcdn.com/w80/mh.png" class="flag">
+  <div class="country-name">Marshall Islands</div>
 </div>
-</a>
 
-<a href="Mauritania.html" class="country-link" onclick="return openCountry(event, 'Mauritania.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/mr.png" class="flag">
-<div class="country-name">Mauritania</div>
+<div class="country-card" onclick="window.location.href='Mauritania.html'">
+  <img src="https://flagcdn.com/w80/mr.png" class="flag">
+  <div class="country-name">Mauritania</div>
 </div>
-</a>
 
-<a href="Mauritius.html" class="country-link" onclick="return openCountry(event, 'Mauritius.html')">
-<div class="country-card">
-<img src="https://flagcdn.com/w80/mu.png" class="flag">
-<div class="country-name">Mauritius</div>
+<div class="country-card" onclick="window.location.href='Mauritius.html'">
+  <img src="https://flagcdn.com/w80/mu.png" class="flag">
+  <div class="country-name">Mauritius</div>
 </div>
-</a>
 
-<a href="Mexico.html" class="country-link" onclick="return openCountry(event, 'Mexico.html')">
-<div class="country-card">
-<div class="country-name">Mexico</div>
+<div class="country-card" onclick="window.location.href='Mexico.html'">
+  <img src="https://flagcdn.com/w80/mx.png" class="flag">
+  <div class="country-name">Mexico</div>
 </div>
-</a>
 
-<a href="Micronesia.html" class="country-link" onclick="return openCountry(event, 'Micronesia.html')">
-<div class="country-card">
-<div class="country-name">Micronesia</div>
+<div class="country-card" onclick="window.location.href='Micronesia.html'">
+  <img src="https://flagcdn.com/w80/fm.png" class="flag">
+  <div class="country-name">Micronesia</div>
 </div>
-</a>
 
-<a href="Moldova.html" class="country-link" onclick="return openCountry(event, 'Moldova.html')">
-<div class="country-card">
-<div class="country-name">Moldova</div>
+<div class="country-card" onclick="window.location.href='Moldova.html'">
+  <img src="https://flagcdn.com/w80/md.png" class="flag">
+  <div class="country-name">Moldova</div>
 </div>
-</a>
 
-<a href="Monaco.html" class="country-link" onclick="return openCountry(event, 'Monaco.html')">
-<div class="country-card">
-<div class="country-name">Monaco</div>
+<div class="country-card" onclick="window.location.href='Monaco.html'">
+  <img src="https://flagcdn.com/w80/mc.png" class="flag">
+  <div class="country-name">Monaco</div>
 </div>
-</a>
-
-<a href="Mongolia.html" class="country-link" onclick="return openCountry(event, 'Mongolia.html')">
-<div class="country-card">
-<div class="country-name">Mongolia</div>
+<div class="country-card" onclick="window.location.href='Mongolia.html'">
+  <img src="https://flagcdn.com/w80/mn.png" class="flag">
+  <div class="country-name">Mongolia</div>
 </div>
-</a>
 
-<a href="Montenegro.html" class="country-link" onclick="return openCountry(event, 'Montenegro.html')">
-<div class="country-card">
-<div class="country-name">Montenegro</div>
+<div class="country-card" onclick="window.location.href='Montenegro.html'">
+  <img src="https://flagcdn.com/w80/me.png" class="flag">
+  <div class="country-name">Montenegro</div>
 </div>
-</a>
 
-<a href="Morocco.html" class="country-link" onclick="return openCountry(event, 'Morocco.html')">
-<div class="country-card">
-<div class="country-name">Morocco</div>
+<div class="country-card" onclick="window.location.href='Morocco.html'">
+  <img src="https://flagcdn.com/w80/ma.png" class="flag">
+  <div class="country-name">Morocco</div>
 </div>
-</a>
 
-<a href="Mozambique.html" class="country-link" onclick="return openCountry(event, 'Mozambique.html')">
-<div class="country-card">
-<div class="country-name">Mozambique</div>
+<div class="country-card" onclick="window.location.href='Mozambique.html'">
+  <img src="https://flagcdn.com/w80/mz.png" class="flag">
+  <div class="country-name">Mozambique</div>
 </div>
-</a>
 
-<a href="Myanmar-Burma.html" class="country-link" onclick="return openCountry(event, 'Myanmar-Burma.html')">
-<div class="country-card">
-<div class="country-name">Myanmar (Burma)</div>
+<div class="country-card" onclick="window.location.href='Myanmar-Burma.html'">
+  <img src="https://flagcdn.com/w80/mm.png" class="flag">
+  <div class="country-name">Myanmar (Burma)</div>
 </div>
-</a>
 
-<a href="Namibia.html" class="country-link" onclick="return openCountry(event, 'Namibia.html')">
-<div class="country-card">
-<div class="country-name">Namibia</div>
+<div class="country-card" onclick="window.location.href='Namibia.html'">
+  <img src="https://flagcdn.com/w80/na.png" class="flag">
+  <div class="country-name">Namibia</div>
 </div>
-</a>
 
-<a href="Nauru.html" class="country-link" onclick="return openCountry(event, 'Nauru.html')">
-<div class="country-card">
-<div class="country-name">Nauru</div>
+<div class="country-card" onclick="window.location.href='Nauru.html'">
+  <img src="https://flagcdn.com/w80/nr.png" class="flag">
+  <div class="country-name">Nauru</div>
 </div>
-</a>
 
-<a href="Nepal.html" class="country-link" onclick="return openCountry(event, 'Nepal.html')">
-<div class="country-card">
-<div class="country-name">Nepal</div>
+<div class="country-card" onclick="window.location.href='Nepal.html'">
+  <img src="https://flagcdn.com/w80/np.png" class="flag">
+  <div class="country-name">Nepal</div>
 </div>
-</a>
 
-<a href="Netherlands.html" class="country-link" onclick="return openCountry(event, 'Netherlands.html')">
-<div class="country-card">
-<div class="country-name">Netherlands</div>
+<div class="country-card" onclick="window.location.href='Netherlands.html'">
+  <img src="https://flagcdn.com/w80/nl.png" class="flag">
+  <div class="country-name">Netherlands</div>
 </div>
-</a>
 
-<a href="New-Zealand.html" class="country-link" onclick="return openCountry(event, 'New-Zealand.html')">
-<div class="country-card">
-<div class="country-name">New Zealand</div>
+<div class="country-card" onclick="window.location.href='New-Zealand.html'">
+  <img src="https://flagcdn.com/w80/nz.png" class="flag">
+  <div class="country-name">New Zealand</div>
 </div>
-</a>
 
-<a href="Nicaragua.html" class="country-link" onclick="return openCountry(event, 'Nicaragua.html')">
-<div class="country-card">
-<div class="country-name">Nicaragua</div>
+<div class="country-card" onclick="window.location.href='Nicaragua.html'">
+  <img src="https://flagcdn.com/w80/ni.png" class="flag">
+  <div class="country-name">Nicaragua</div>
 </div>
-</a>
 
-<a href="Niger.html" class="country-link" onclick="return openCountry(event, 'Niger.html')">
-<div class="country-card">
-<div class="country-name">Niger</div>
+<div class="country-card" onclick="window.location.href='Niger.html'">
+  <img src="https://flagcdn.com/w80/ne.png" class="flag">
+  <div class="country-name">Niger</div>
 </div>
-</a>
 
-<a href="Nigeria.html" class="country-link" onclick="return openCountry(event, 'Nigeria.html')">
-<div class="country-card">
-<div class="country-name">Nigeria</div>
+<div class="country-card" onclick="window.location.href='Nigeria.html'">
+  <img src="https://flagcdn.com/w80/ng.png" class="flag">
+  <div class="country-name">Nigeria</div>
 </div>
-</a>
 
-<a href="Norway.html" class="country-link" onclick="return openCountry(event, 'Norway.html')">
-<div class="country-card">
-<div class="country-name">Norway</div>
+<div class="country-card" onclick="window.location.href='Norway.html'">
+  <img src="https://flagcdn.com/w80/no.png" class="flag">
+  <div class="country-name">Norway</div>
 </div>
-</a>
 
-<a href="Oman.html" class="country-link" onclick="return openCountry(event, 'Oman.html')">
-<div class="country-card">
-<div class="country-name">Oman</div>
+<div class="country-card" onclick="window.location.href='Oman.html'">
+  <img src="https://flagcdn.com/w80/om.png" class="flag">
+  <div class="country-name">Oman</div>
 </div>
-</a>
+<a href="Pakistan.html" class="country-link">
 
-<a href="Pakistan.html" class="country-link" onclick="return openCountry(event, 'Pakistan.html')">
-<div class="country-card">
-<div class="country-name">Pakistan</div>
-</div>
-</a>
+  <div class="country-card">
+    <img src="https://flagcdn.com/w80/pk.png" class="flag">
 
-<a href="Palau.html" class="country-link" onclick="return openCountry(event, 'Palau.html')">
-<div class="country-card">
-<div class="country-name">Palau</div>
-</div>
-</a>
+    <div class="country-name">
+      Pakistan
+    </div>
+  </div>
 
-<a href="Panama.html" class="country-link" onclick="return openCountry(event, 'Panama.html')">
-<div class="country-card">
-<div class="country-name">Panama</div>
-</div>
 </a>
-
-<a href="Papua-New-Guinea.html" class="country-link" onclick="return openCountry(event, 'Papua-New-Guinea.html')">
-<div class="country-card">
-<div class="country-name">Papua New Guinea</div>
+<div class="country-card" onclick="window.location.href='Palau.html'">
+  <img src="https://flagcdn.com/w80/pw.png" class="flag">
+  <div class="country-name">Palau</div>
 </div>
-</a>
 
-<a href="Paraguay.html" class="country-link" onclick="return openCountry(event, 'Paraguay.html')">
-<div class="country-card">
-<div class="country-name">Paraguay</div>
+<div class="country-card" onclick="window.location.href='Panama.html'">
+  <img src="https://flagcdn.com/w80/pa.png" class="flag">
+  <div class="country-name">Panama</div>
 </div>
-</a>
-<a href="Peru.html" class="country-link" onclick="return openCountry(event, 'Peru.html')">
-<div class="country-card">
-<div class="country-name">Peru</div>
-</div>
-</a>
 
-<a href="Philippines.html" class="country-link" onclick="return openCountry(event, 'Philippines.html')">
-<div class="country-card">
-<div class="country-name">Philippines</div>
+<div class="country-card" onclick="window.location.href='Papua-New-Guinea.html'">
+  <img src="https://flagcdn.com/w80/pg.png" class="flag">
+  <div class="country-name">Papua New Guinea</div>
 </div>
-</a>
 
-<a href="Poland.html" class="country-link" onclick="return openCountry(event, 'Poland.html')">
-<div class="country-card">
-<div class="country-name">Poland</div>
+<div class="country-card" onclick="window.location.href='Paraguay.html'">
+  <img src="https://flagcdn.com/w80/py.png" class="flag">
+  <div class="country-name">Paraguay</div>
 </div>
-</a>
 
-<a href="Portugal.html" class="country-link" onclick="return openCountry(event, 'Portugal.html')">
-<div class="country-card">
-<div class="country-name">Portugal</div>
+<div class="country-card" onclick="window.location.href='Peru.html'">
+  <img src="https://flagcdn.com/w80/pe.png" class="flag">
+  <div class="country-name">Peru</div>
 </div>
-</a>
 
-<a href="Qatar.html" class="country-link" onclick="return openCountry(event, 'Qatar.html')">
-<div class="country-card">
-<div class="country-name">Qatar</div>
+<div class="country-card" onclick="window.location.href='Philippines.html'">
+  <img src="https://flagcdn.com/w80/ph.png" class="flag">
+  <div class="country-name">Philippines</div>
 </div>
-</a>
 
-<a href="Romania.html" class="country-link" onclick="return openCountry(event, 'Romania.html')">
-<div class="country-card">
-<div class="country-name">Romania</div>
+<div class="country-card" onclick="window.location.href='Poland.html'">
+  <img src="https://flagcdn.com/w80/pl.png" class="flag">
+  <div class="country-name">Poland</div>
 </div>
-</a>
 
-<a href="Russian-Federation.html" class="country-link" onclick="return openCountry(event, 'Russian-Federation.html')">
-<div class="country-card">
-<div class="country-name">Russian Federation</div>
+<div class="country-card" onclick="window.location.href='Portugal.html'">
+  <img src="https://flagcdn.com/w80/pt.png" class="flag">
+  <div class="country-name">Portugal</div>
 </div>
-</a>
 
-<a href="Rwanda.html" class="country-link" onclick="return openCountry(event, 'Rwanda.html')">
-<div class="country-card">
-<div class="country-name">Rwanda</div>
+<div class="country-card" onclick="window.location.href='Qatar.html'">
+  <img src="https://flagcdn.com/w80/qa.png" class="flag">
+  <div class="country-name">Qatar</div>
 </div>
-</a>
 
-<a href="St-Kitts-Nevis.html" class="country-link" onclick="return openCountry(event, 'St-Kitts-Nevis.html')">
-<div class="country-card">
-<div class="country-name">St Kitts & Nevis</div>
+<div class="country-card" onclick="window.location.href='Romania.html'">
+  <img src="https://flagcdn.com/w80/ro.png" class="flag">
+  <div class="country-name">Romania</div>
 </div>
-</a>
 
-<a href="St-Lucia.html" class="country-link" onclick="return openCountry(event, 'St-Lucia.html')">
-<div class="country-card">
-<div class="country-name">St Lucia</div>
+<div class="country-card" onclick="window.location.href='Russian-Federation.html'">
+  <img src="https://flagcdn.com/w80/ru.png" class="flag">
+  <div class="country-name">Russian Federation</div>
 </div>
-</a>
 
-<a href="St-Vincent-Grenadines.html" class="country-link" onclick="return openCountry(event, 'St-Vincent-Grenadines.html')">
-<div class="country-card">
-<div class="country-name">St Vincent & Grenadines</div>
+<div class="country-card" onclick="window.location.href='Rwanda.html'">
+  <img src="https://flagcdn.com/w80/rw.png" class="flag">
+  <div class="country-name">Rwanda</div>
 </div>
-</a>
 
-<a href="Samoa.html" class="country-link" onclick="return openCountry(event, 'Samoa.html')">
-<div class="country-card">
-<div class="country-name">Samoa</div>
+<div class="country-card" onclick="window.location.href='St-Kitts-Nevis.html'">
+  <img src="https://flagcdn.com/w80/kn.png" class="flag">
+  <div class="country-name">St Kitts & Nevis</div>
 </div>
-</a>
 
-<a href="San-Marino.html" class="country-link" onclick="return openCountry(event, 'San-Marino.html')">
-<div class="country-card">
-<div class="country-name">San Marino</div>
+<div class="country-card" onclick="window.location.href='St-Lucia.html'">
+  <img src="https://flagcdn.com/w80/lc.png" class="flag">
+  <div class="country-name">St Lucia</div>
 </div>
-</a>
 
-<a href="Sao-Tome-Principe.html" class="country-link" onclick="return openCountry(event, 'Sao-Tome-Principe.html')">
-<div class="country-card">
-<div class="country-name">Sao Tome & Principe</div>
+<div class="country-card" onclick="window.location.href='St-Vincent-Grenadines.html'">
+  <img src="https://flagcdn.com/w80/vc.png" class="flag">
+  <div class="country-name">St Vincent & Grenadines</div>
 </div>
-</a>
 
-<a href="Saudi-Arabia.html" class="country-link" onclick="return openCountry(event, 'Saudi-Arabia.html')">
-<div class="country-card">
-<div class="country-name">Saudi Arabia</div>
+<div class="country-card" onclick="window.location.href='Samoa.html'">
+  <img src="https://flagcdn.com/w80/ws.png" class="flag">
+  <div class="country-name">Samoa</div>
 </div>
-</a>
 
-<a href="Senegal.html" class="country-link" onclick="return openCountry(event, 'Senegal.html')">
-<div class="country-card">
-<div class="country-name">Senegal</div>
+<div class="country-card" onclick="window.location.href='San-Marino.html'">
+  <img src="https://flagcdn.com/w80/sm.png" class="flag">
+  <div class="country-name">San Marino</div>
 </div>
-</a>
 
-<a href="Serbia.html" class="country-link" onclick="return openCountry(event, 'Serbia.html')">
-<div class="country-card">
-<div class="country-name">Serbia</div>
+<div class="country-card" onclick="window.location.href='Sao-Tome-Principe.html'">
+  <img src="https://flagcdn.com/w80/st.png" class="flag">
+  <div class="country-name">Sao Tome & Principe</div>
 </div>
-</a>
 
-<a href="Seychelles.html" class="country-link" onclick="return openCountry(event, 'Seychelles.html')">
-<div class="country-card">
-<div class="country-name">Seychelles</div>
+<div class="country-card" onclick="window.location.href='Saudi-Arabia.html'">
+  <img src="https://flagcdn.com/w80/sa.png" class="flag">
+  <div class="country-name">Saudi Arabia</div>
 </div>
-</a>
 
-<a href="Sierra-Leone.html" class="country-link" onclick="return openCountry(event, 'Sierra-Leone.html')">
-<div class="country-card">
-<div class="country-name">Sierra Leone</div>
+<div class="country-card" onclick="window.location.href='Senegal.html'">
+  <img src="https://flagcdn.com/w80/sn.png" class="flag">
+  <div class="country-name">Senegal</div>
 </div>
-</a>
 
-<a href="Singapore.html" class="country-link" onclick="return openCountry(event, 'Singapore.html')">
-<div class="country-card">
-<div class="country-name">Singapore</div>
+<div class="country-card" onclick="window.location.href='Serbia.html'">
+  <img src="https://flagcdn.com/w80/rs.png" class="flag">
+  <div class="country-name">Serbia</div>
 </div>
-</a>
 
-<a href="Slovakia.html" class="country-link" onclick="return openCountry(event, 'Slovakia.html')">
-<div class="country-card">
-<div class="country-name">Slovakia</div>
+<div class="country-card" onclick="window.location.href='Seychelles.html'">
+  <img src="https://flagcdn.com/w80/sc.png" class="flag">
+  <div class="country-name">Seychelles</div>
 </div>
-</a>
 
-<a href="Slovenia.html" class="country-link" onclick="return openCountry(event, 'Slovenia.html')">
-<div class="country-card">
-<div class="country-name">Slovenia</div>
+<div class="country-card" onclick="window.location.href='Sierra-Leone.html'">
+  <img src="https://flagcdn.com/w80/sl.png" class="flag">
+  <div class="country-name">Sierra Leone</div>
 </div>
-</a>
 
-<a href="Solomon-Islands.html" class="country-link" onclick="return openCountry(event, 'Solomon-Islands.html')">
-<div class="country-card">
-<div class="country-name">Solomon Islands</div>
+<div class="country-card" onclick="window.location.href='Singapore.html'">
+  <img src="https://flagcdn.com/w80/sg.png" class="flag">
+  <div class="country-name">Singapore</div>
 </div>
-</a>
 
-<a href="Somalia.html" class="country-link" onclick="return openCountry(event, 'Somalia.html')">
-<div class="country-card">
-<div class="country-name">Somalia</div>
-</div>
-</a>
-<a href="SouthAfrica.html" class="country-link" onclick="return openCountry(event, 'SouthAfrica.html')">
-<div class="country-card">
-<div class="country-name">South Africa</div>
+<div class="country-card" onclick="window.location.href='Slovakia.html'">
+  <img src="https://flagcdn.com/w80/sk.png" class="flag">
+  <div class="country-name">Slovakia</div>
 </div>
-</a>
 
-<a href="SouthSudan.html" class="country-link" onclick="return openCountry(event, 'SouthSudan.html')">
-<div class="country-card">
-<div class="country-name">South Sudan</div>
+<div class="country-card" onclick="window.location.href='Slovenia.html'">
+  <img src="https://flagcdn.com/w80/si.png" class="flag">
+  <div class="country-name">Slovenia</div>
 </div>
-</a>
 
-<a href="Spain.html" class="country-link" onclick="return openCountry(event, 'Spain.html')">
-<div class="country-card">
-<div class="country-name">Spain</div>
+<div class="country-card" onclick="window.location.href='Solomon-Islands.html'">
+  <img src="https://flagcdn.com/w80/sb.png" class="flag">
+  <div class="country-name">Solomon Islands</div>
 </div>
-</a>
 
-<a href="SriLanka.html" class="country-link" onclick="return openCountry(event, 'SriLanka.html')">
-<div class="country-card">
-<div class="country-name">Sri Lanka</div>
+<div class="country-card" onclick="window.location.href='Somalia.html'">
+  <img src="https://flagcdn.com/w80/so.png" class="flag">
+  <div class="country-name">Somalia</div>
 </div>
-</a>
+<div class="country-card" onclick="window.location.href='SouthAfrica.html'"><img src="https://flagcdn.com/w80/za.png" class="flag"><div class="country-name">South Africa</div></div>
 
-<a href="Sudan.html" class="country-link" onclick="return openCountry(event, 'Sudan.html')">
-<div class="country-card">
-<div class="country-name">Sudan</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='SouthSudan.html'"><img src="https://flagcdn.com/w80/ss.png" class="flag"><div class="country-name">South Sudan</div></div>
 
-<a href="Suriname.html" class="country-link" onclick="return openCountry(event, 'Suriname.html')">
-<div class="country-card">
-<div class="country-name">Suriname</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Spain.html'"><img src="https://flagcdn.com/w80/es.png" class="flag"><div class="country-name">Spain</div></div>
 
-<a href="Swaziland.html" class="country-link" onclick="return openCountry(event, 'Swaziland.html')">
-<div class="country-card">
-<div class="country-name">Swaziland</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='SriLanka.html'"><img src="https://flagcdn.com/w80/lk.png" class="flag"><div class="country-name">Sri Lanka</div></div>
 
-<a href="Sweden.html" class="country-link" onclick="return openCountry(event, 'Sweden.html')">
-<div class="country-card">
-<div class="country-name">Sweden</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Sudan.html'"><img src="https://flagcdn.com/w80/sd.png" class="flag"><div class="country-name">Sudan</div></div>
 
-<a href="Switzerland.html" class="country-link" onclick="return openCountry(event, 'Switzerland.html')">
-<div class="country-card">
-<div class="country-name">Switzerland</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Suriname.html'"><img src="https://flagcdn.com/w80/sr.png" class="flag"><div class="country-name">Suriname</div></div>
 
-<a href="Syria.html" class="country-link" onclick="return openCountry(event, 'Syria.html')">
-<div class="country-card">
-<div class="country-name">Syria</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Swaziland.html'"><img src="https://flagcdn.com/w80/sz.png" class="flag"><div class="country-name">Swaziland</div></div>
 
-<a href="Taiwan.html" class="country-link" onclick="return openCountry(event, 'Taiwan.html')">
-<div class="country-card">
-<div class="country-name">Taiwan</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Sweden.html'"><img src="https://flagcdn.com/w80/se.png" class="flag"><div class="country-name">Sweden</div></div>
 
-<a href="Tajikistan.html" class="country-link" onclick="return openCountry(event, 'Tajikistan.html')">
-<div class="country-card">
-<div class="country-name">Tajikistan</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Switzerland.html'"><img src="https://flagcdn.com/w80/ch.png" class="flag"><div class="country-name">Switzerland</div></div>
 
-<a href="Tanzania.html" class="country-link" onclick="return openCountry(event, 'Tanzania.html')">
-<div class="country-card">
-<div class="country-name">Tanzania</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Syria.html'"><img src="https://flagcdn.com/w80/sy.png" class="flag"><div class="country-name">Syria</div></div>
 
-<a href="Thailand.html" class="country-link" onclick="return openCountry(event, 'Thailand.html')">
-<div class="country-card">
-<div class="country-name">Thailand</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Taiwan.html'"><img src="https://flagcdn.com/w80/tw.png" class="flag"><div class="country-name">Taiwan</div></div>
 
-<a href="Togo.html" class="country-link" onclick="return openCountry(event, 'Togo.html')">
-<div class="country-card">
-<div class="country-name">Togo</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Tajikistan.html'"><img src="https://flagcdn.com/w80/tj.png" class="flag"><div class="country-name">Tajikistan</div></div>
 
-<a href="Tonga.html" class="country-link" onclick="return openCountry(event, 'Tonga.html')">
-<div class="country-card">
-<div class="country-name">Tonga</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Tanzania.html'"><img src="https://flagcdn.com/w80/tz.png" class="flag"><div class="country-name">Tanzania</div></div>
 
-<a href="TrinidadAndTobago.html" class="country-link" onclick="return openCountry(event, 'TrinidadAndTobago.html')">
-<div class="country-card">
-<div class="country-name">Trinidad & Tobago</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Thailand.html'"><img src="https://flagcdn.com/w80/th.png" class="flag"><div class="country-name">Thailand</div></div>
 
-<a href="Tunisia.html" class="country-link" onclick="return openCountry(event, 'Tunisia.html')">
-<div class="country-card">
-<div class="country-name">Tunisia</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Togo.html'"><img src="https://flagcdn.com/w80/tg.png" class="flag"><div class="country-name">Togo</div></div>
 
-<a href="Turkey.html" class="country-link" onclick="return openCountry(event, 'Turkey.html')">
-<div class="country-card">
-<div class="country-name">Turkey</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Tonga.html'"><img src="https://flagcdn.com/w80/to.png" class="flag"><div class="country-name">Tonga</div></div>
 
-<a href="Turkmenistan.html" class="country-link" onclick="return openCountry(event, 'Turkmenistan.html')">
-<div class="country-card">
-<div class="country-name">Turkmenistan</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='TrinidadAndTobago.html'"><img src="https://flagcdn.com/w80/tt.png" class="flag"><div class="country-name">Trinidad & Tobago</div></div>
 
-<a href="Tuvalu.html" class="country-link" onclick="return openCountry(event, 'Tuvalu.html')">
-<div class="country-card">
-<div class="country-name">Tuvalu</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Tunisia.html'"><img src="https://flagcdn.com/w80/tn.png" class="flag"><div class="country-name">Tunisia</div></div>
 
-<a href="Uganda.html" class="country-link" onclick="return openCountry(event, 'Uganda.html')">
-<div class="country-card">
-<div class="country-name">Uganda</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Turkey.html'"><img src="https://flagcdn.com/w80/tr.png" class="flag"><div class="country-name">Turkey</div></div>
+<div class="country-card" onclick="window.location.href='Turkmenistan.html'"><img src="https://flagcdn.com/w80/tm.png" class="flag"><div class="country-name">Turkmenistan</div></div>
 
-<a href="Ukraine.html" class="country-link" onclick="return openCountry(event, 'Ukraine.html')">
-<div class="country-card">
-<div class="country-name">Ukraine</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Tuvalu.html'"><img src="https://flagcdn.com/w80/tv.png" class="flag"><div class="country-name">Tuvalu</div></div>
 
-<a href="UnitedArabEmirates.html" class="country-link" onclick="return openCountry(event, 'UnitedArabEmirates.html')">
-<div class="country-card">
-<div class="country-name">United Arab Emirates</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Uganda.html'"><img src="https://flagcdn.com/w80/ug.png" class="flag"><div class="country-name">Uganda</div></div>
 
-<a href="UnitedKingdom.html" class="country-link" onclick="return openCountry(event, 'UnitedKingdom.html')">
-<div class="country-card">
-<div class="country-name">United Kingdom</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Ukraine.html'"><img src="https://flagcdn.com/w80/ua.png" class="flag"><div class="country-name">Ukraine</div></div>
 
-<a href="UnitedStates.html" class="country-link" onclick="return openCountry(event, 'UnitedStates.html')">
-<div class="country-card">
-<div class="country-name">United States</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='UnitedArabEmirates.html'"><img src="https://flagcdn.com/w80/ae.png" class="flag"><div class="country-name">United Arab Emirates</div></div>
 
-<a href="Uruguay.html" class="country-link" onclick="return openCountry(event, 'Uruguay.html')">
-<div class="country-card">
-<div class="country-name">Uruguay</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='UnitedKingdom.html'"><img src="https://flagcdn.com/w80/gb.png" class="flag"><div class="country-name">United Kingdom</div></div>
 
-<a href="Uzbekistan.html" class="country-link" onclick="return openCountry(event, 'Uzbekistan.html')">
-<div class="country-card">
-<div class="country-name">Uzbekistan</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='UnitedStates.html'"><img src="https://flagcdn.com/w80/us.png" class="flag"><div class="country-name">United States</div></div>
 
-<a href="Vanuatu.html" class="country-link" onclick="return openCountry(event, 'Vanuatu.html')">
-<div class="country-card">
-<div class="country-name">Vanuatu</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Uruguay.html'"><img src="https://flagcdn.com/w80/uy.png" class="flag"><div class="country-name">Uruguay</div></div>
 
-<a href="VaticanCity.html" class="country-link" onclick="return openCountry(event, 'VaticanCity.html')">
-<div class="country-card">
-<div class="country-name">Vatican City</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Uzbekistan.html'"><img src="https://flagcdn.com/w80/uz.png" class="flag"><div class="country-name">Uzbekistan</div></div>
 
-<a href="Venezuela.html" class="country-link" onclick="return openCountry(event, 'Venezuela.html')">
-<div class="country-card">
-<div class="country-name">Venezuela</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Vanuatu.html'"><img src="https://flagcdn.com/w80/vu.png" class="flag"><div class="country-name">Vanuatu</div></div>
 
-<a href="Vietnam.html" class="country-link" onclick="return openCountry(event, 'Vietnam.html')">
-<div class="country-card">
-<div class="country-name">Vietnam</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='VaticanCity.html'"><img src="https://flagcdn.com/w80/va.png" class="flag"><div class="country-name">Vatican City</div></div>
 
-<a href="Yemen.html" class="country-link" onclick="return openCountry(event, 'Yemen.html')">
-<div class="country-card">
-<div class="country-name">Yemen</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Venezuela.html'"><img src="https://flagcdn.com/w80/ve.png" class="flag"><div class="country-name">Venezuela</div></div>
 
-<a href="Zambia.html" class="country-link" onclick="return openCountry(event, 'Zambia.html')">
-<div class="country-card">
-<div class="country-name">Zambia</div>
-</div>
-</a>
+<div class="country-card" onclick="window.location.href='Vietnam.html'"><img src="https://flagcdn.com/w80/vn.png" class="flag"><div class="country-name">Vietnam</div></div>
 
-<a href="Zimbabwe.html" class="country-link" onclick="return openCountry(event, 'Zimbabwe.html')">
-<div class="country-card">
-<div class="country-name">Zimbabwe</div>
+<div class="country-card" onclick="window.location.href='Yemen.html'"><img src="https://flagcdn.com/w80/ye.png" class="flag"><div class="country-name">Yemen</div></div>
+
+<div class="country-card" onclick="window.location.href='Zambia.html'"><img src="https://flagcdn.com/w80/zm.png" class="flag"><div class="country-name">Zambia</div></div>
+
+<div class="country-card" onclick="window.location.href='Zimbabwe.html'"><img src="https://flagcdn.com/w80/zw.png" class="flag"><div class="country-name">Zimbabwe</div></div>
 </div>
-</a>
 
 
   <!-- 👉 তুমি এখানে তোমার full list paste করবে -->
@@ -1787,20 +1497,9 @@ searchBox.addEventListener("keyup", function () {
 });
 
 
-function showPopup(){
-  document.getElementById("duaPopup").style.display = "flex";
-}
-
-function closePopup(){
-  document.getElementById("duaPopup").style.display = "none";
-}
-
-function openCountry(event, page){
-
-  event.preventDefault();
+function openCountry(page){
 
   fetch(page)
-
     .then(response => {
 
       if(response.ok){
@@ -1808,45 +1507,22 @@ function openCountry(event, page){
       }
 
       else{
-        showPopup();
+        alert("🤲 Please make dua for me.\n\nI am still making this part.\nPlease wait...");
       }
 
     })
 
     .catch(() => {
 
-      showPopup();
+      alert("🤲 Please make dua for me.\n\nI am still making this part.\nPlease wait...");
 
     });
 
-  return false;
 }
 
 
 </script>
-<div id="duaPopup" class="dua-popup">
 
-  <div class="dua-popup-box">
-
-    <div class="popup-glow"></div>
-
-    <div class="popup-title">
-      ☪ Reminder
-    </div>
-
-    <div class="popup-text">
-      🤲 Please make dua for me.<br><br>
-      I am still making this part.<br>
-      Please wait...
-    </div>
-
-    <button onclick="closePopup()" class="popup-btn">
-      OK
-    </button>
-
-  </div>
-
-</div>
 
 </body>
 </html>
