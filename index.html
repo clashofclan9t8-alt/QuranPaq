@@ -739,7 +739,7 @@ body.loading{
 <div class="country-name">Eritrea</div>
 </div>
 </a>
-```html id="p4kz9x"
+
 <a href="Estonia.html" class="country-link">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ee.png" class="flag">
@@ -1495,7 +1495,32 @@ searchBox.addEventListener("keyup", function () {
   });
 
 });
+<script>
 
+function openCountry(page){
+
+  fetch(page)
+    .then(response => {
+
+      if(response.ok){
+        window.location.href = page;
+      }
+
+      else{
+        alert("🤲 Please make dua for me.\n\nI am still making this part.\nPlease wait...");
+      }
+
+    })
+
+    .catch(() => {
+
+      alert("🤲 Please make dua for me.\n\nI am still making this part.\nPlease wait...");
+
+    });
+
+}
+
+</script>
 </script>
 
 
