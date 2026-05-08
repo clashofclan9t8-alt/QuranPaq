@@ -10,7 +10,7 @@
 <style>
 
 *{
-  margin:0; 
+  margin:0;
   padding:0;
   box-sizing:border-box;
 }
@@ -23,7 +23,7 @@ body{
   font-family:'Poppins',sans-serif;
   background:
   linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.88)),
-  url('pakistan.png');
+  url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop');
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
@@ -61,7 +61,7 @@ body::before{
   width:100%;
   max-width:450px;
   margin:auto;
-  border-radius:100px;
+  border-radius:26px;
   overflow:hidden;
   border:1px solid rgba(255,215,120,.35);
   box-shadow:
@@ -75,8 +75,7 @@ body::before{
   height:170px;
   object-fit:cover;
   display:block;
-  filter:brightness(1);
-   transform:scale(1.1);
+  filter:brightness(.85);
 }
 
 .banner-content{
@@ -87,7 +86,7 @@ body::before{
   align-items:center;
   justify-content:center;
   text-align:center;
-  background:linear-gradient(rgba(0, 0, 0, 0.0),rgba(255, 0, 0, 0));
+  background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.55));
 }
 
 .banner-content h1{
@@ -242,10 +241,11 @@ body::before{
 
   <div class="banner">
 
-    <img src="pakistan.png">
+    <img src="">
 
     <div class="banner-content">
-      
+      <h1>📖 Quran Paq</h1>
+      <p>Quran For Everyone</p>
     </div>
 
   </div>
@@ -262,12 +262,6 @@ body::before{
 <div class="container" id="surahList">
 
 <!-- SURAH ITEMS -->
-
-<script>
-
-const surahs = [
-
-<!-- JUST REPLACE THE surahs ARRAY WITH THIS -->
 
 <!-- JUST REPLACE THE surahs ARRAY WITH THIS -->
 
@@ -392,7 +386,6 @@ const surahs = [
 
 ];
 
-
 const surahList = document.getElementById("surahList");
 
 surahs.forEach((s,index)=>{
@@ -443,7 +436,7 @@ searchInput.addEventListener("keyup", ()=>{
 </div>
 
 <div class="footer">
-  ✨ For Your App Design Whatsapp +8801854464627
+  ✨ Holy Quran • Premium Mobile UI
 </div>
 
 </body>
