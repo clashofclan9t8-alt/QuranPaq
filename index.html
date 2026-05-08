@@ -324,6 +324,135 @@ body.loading{
 .list{
   transition:1s ease;
 }
+
+
+
+
+/* 🌙 Islamic Popup */
+
+.dua-popup{
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,0.72);
+
+  backdrop-filter:blur(8px);
+
+  display:none;
+  justify-content:center;
+  align-items:center;
+
+  z-index:999999;
+}
+
+.dua-popup-box{
+  position:relative;
+
+  width:90%;
+  max-width:420px;
+
+  padding:35px 25px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    145deg,
+    rgba(10,20,40,0.96),
+    rgba(5,12,28,0.96)
+  );
+
+  border:1px solid rgba(255,215,120,0.35);
+
+  box-shadow:
+  0 0 30px rgba(255,215,120,0.15),
+  0 0 80px rgba(255,180,50,0.08);
+
+  text-align:center;
+
+  animation:popupShow 0.35s ease;
+}
+
+.popup-glow{
+  position:absolute;
+  top:-100px;
+  left:-100px;
+
+  width:240px;
+  height:240px;
+
+  background:radial-gradient(
+    rgba(255,215,120,0.22),
+    transparent 70%
+  );
+}
+
+.popup-title{
+  color:#ffd777;
+
+  font-size:28px;
+  font-weight:bold;
+
+  margin-bottom:20px;
+
+  text-shadow:
+  0 0 12px rgba(255,215,120,0.5);
+}
+
+.popup-text{
+  color:white;
+
+  font-size:18px;
+  line-height:1.8;
+
+  margin-bottom:28px;
+}
+
+.popup-btn{
+  border:none;
+  outline:none;
+
+  padding:12px 35px;
+
+  border-radius:50px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ffd777,
+    #ffb347
+  );
+
+  color:#111;
+
+  font-size:17px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.popup-btn:hover{
+  transform:scale(1.05);
+}
+
+@keyframes popupShow{
+
+  from{
+    opacity:0;
+    transform:scale(0.8);
+  }
+
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+
+}
+
 </style>
 </head>
 
@@ -351,98 +480,99 @@ body.loading{
 <div class="list" id="countryList">
 
   <!-- SAME YOUR COUNTRY LIST (short demo) -->
-```html
-<a href="Afghanistan.html" class="country-link">
+
+
+
+  <a href="Afghanistan.html" class="country-link" onclick="return openCountry(event, 'Afghanistan.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/af.png" class="flag">
 <div class="country-name">Afghanistan</div>
 </div>
 </a>
 
-<a href="Albania.html" class="country-link">
+<a href="Albania.html" class="country-link" onclick="return openCountry(event, 'Albania.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/al.png" class="flag">
 <div class="country-name">Albania</div>
 </div>
 </a>
 
-<a href="Algeria.html" class="country-link">
+<a href="Algeria.html" class="country-link" onclick="return openCountry(event, 'Algeria.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/dz.png" class="flag">
 <div class="country-name">Algeria</div>
 </div>
 </a>
 
-<a href="Andorra.html" class="country-link">
+<a href="Andorra.html" class="country-link" onclick="return openCountry(event, 'Andorra.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ad.png" class="flag">
 <div class="country-name">Andorra</div>
 </div>
 </a>
 
-<a href="Angola.html" class="country-link">
+<a href="Angola.html" class="country-link" onclick="return openCountry(event, 'Angola.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ao.png" class="flag">
 <div class="country-name">Angola</div>
 </div>
 </a>
 
-<a href="AntiguaAndDeps.html" class="country-link">
+<a href="AntiguaAndDeps.html" class="country-link" onclick="return openCountry(event, 'AntiguaAndDeps.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ag.png" class="flag">
 <div class="country-name">Antigua & Deps</div>
 </div>
 </a>
 
-<a href="Argentina.html" class="country-link">
+<a href="Argentina.html" class="country-link" onclick="return openCountry(event, 'Argentina.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/ar.png" class="flag">
 <div class="country-name">Argentina</div>
 </div>
 </a>
 
-<a href="Armenia.html" class="country-link">
+<a href="Armenia.html" class="country-link" onclick="return openCountry(event, 'Armenia.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/am.png" class="flag">
 <div class="country-name">Armenia</div>
 </div>
 </a>
 
-<a href="Australia.html" class="country-link">
+<a href="Australia.html" class="country-link" onclick="return openCountry(event, 'Australia.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/au.png" class="flag">
 <div class="country-name">Australia</div>
 </div>
 </a>
 
-<a href="Austria.html" class="country-link">
+<a href="Austria.html" class="country-link" onclick="return openCountry(event, 'Austria.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/at.png" class="flag">
 <div class="country-name">Austria</div>
 </div>
 </a>
 
-<a href="Azerbaijan.html" class="country-link">
+<a href="Azerbaijan.html" class="country-link" onclick="return openCountry(event, 'Azerbaijan.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/az.png" class="flag">
 <div class="country-name">Azerbaijan</div>
 </div>
 </a>
 
-<a href="Bahamas.html" class="country-link">
+<a href="Bahamas.html" class="country-link" onclick="return openCountry(event, 'Bahamas.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bs.png" class="flag">
 <div class="country-name">Bahamas</div>
 </div>
 </a>
 
-<a href="Bahrain.html" class="country-link">
+<a href="Bahrain.html" class="country-link" onclick="return openCountry(event, 'Bahrain.html')">
 <div class="country-card">
 <img src="https://flagcdn.com/w80/bh.png" class="flag">
 <div class="country-name">Bahrain</div>
 </div>
 </a>
-```
 
 <a href="Bangladesh.html" class="country-link">
 
@@ -1495,11 +1625,22 @@ searchBox.addEventListener("keyup", function () {
   });
 
 });
-<script>
 
-function openCountry(page){
+
+function showPopup(){
+  document.getElementById("duaPopup").style.display = "flex";
+}
+
+function closePopup(){
+  document.getElementById("duaPopup").style.display = "none";
+}
+
+function openCountry(event, page){
+
+  event.preventDefault();
 
   fetch(page)
+
     .then(response => {
 
       if(response.ok){
@@ -1507,22 +1648,45 @@ function openCountry(page){
       }
 
       else{
-        alert("🤲 Please make dua for me.\n\nI am still making this part.\nPlease wait...");
+        showPopup();
       }
 
     })
 
     .catch(() => {
 
-      alert("🤲 Please make dua for me.\n\nI am still making this part.\nPlease wait...");
+      showPopup();
 
     });
 
+  return false;
 }
 
-</script>
-</script>
 
+</script>
+<div id="duaPopup" class="dua-popup">
+
+  <div class="dua-popup-box">
+
+    <div class="popup-glow"></div>
+
+    <div class="popup-title">
+      ☪ Reminder
+    </div>
+
+    <div class="popup-text">
+      🤲 Please make dua for me.<br><br>
+      I am still making this part.<br>
+      Please wait...
+    </div>
+
+    <button onclick="closePopup()" class="popup-btn">
+      OK
+    </button>
+
+  </div>
+
+</div>
 
 </body>
 </html>
